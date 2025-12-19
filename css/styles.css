@@ -4,9 +4,16 @@
             font-family: Roboto, "Arial", sans-serif;
         }
         
+        html,
+        body {
+            height: 100%;
+        }
+        
         body {
             background-color: #F0EDDE;
             font-size: 1.125rem;
+            display: flex;
+            flex-direction: column;
         }
         
         h1 {
@@ -185,10 +192,35 @@ select {
             font-size: 1rem;
         }
         
-        main {
+        .main-content,
+        .main-content h1 {
             display: flex;
+            flex: 1;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin: 2rem 0;
+        }
+        
+        .travel-container {
+            display: flex;
+            width: 25vw;
+            height: 75vh;
+            min-width: 650px;
+            padding-top: 2rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            background-color: rgba(229, 208, 172, 0.50);
+            box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.20);
+            margin-top: 2rem;
+        }
+        
+        .travel-container h2 {
+            margin-bottom: 3rem;
         }
         
         .login-form {
@@ -284,9 +316,7 @@ select {
         
         .footer-area {
             display: flex;
-            bottom: 0;
-            right: 0;
-            left: 0;
+            width: 100%;
             position: absolute;
             align-items: center;
             justify-content: center;
@@ -434,6 +464,10 @@ select {
             }
             .footer-area ul {
                 gap: 10rem
+            }
+            .travel-container {
+                min-width: 180px;
+                width: 90%;
             }
             @media screen and (max-width: 500px) {
                 .footer-area ul {
