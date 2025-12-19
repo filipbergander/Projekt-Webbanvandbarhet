@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 3.2</title>
+    <meta name="description" content="Grafisk teknik för webb, bakgrundsfilm med HTML och CSS, samt beskrivning av lösning till uppgiften.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/second.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Laboration 3</h1>
+        <button id="open-sidebarbutton" aria-controls="navbar" aria-expanded="false" aria-label="öppna huvudmeny" onclick="openSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem" fill="#fff">
+                <path
+                    d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+            </svg>
+        </button>
+        <nav id="navbar" aria-label="huvudmeny">
+            <ul>
+                <li><button id="close-sidebarbutton" aria-label="stäng huvudmeny" onclick="closeSidebar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem"
+                            fill="#fff">
+                            <path
+                                d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                        </svg>
+                    </button></li>
+                <li><a href="index.html">Moment 3.1 - Film</a></li>
+                <li><a href="bakgrundsfilm.html" aria-current="page" class="navlinks">Moment 3.2 - Videobakgrund</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="overlay" aria-hidden="true" onclick="closeSidebar()"></div>
+    </header>
+    <main class="videocontainer" onclick="closeSidebar()">
+
+        <section class="content">
+            <h2>Bakgrundsfilm</h2>
+            <div class="film">
+                <p>Innan jag påbörjade uppgiften letade jag inspiration på Youtube hur andra skapat bakgrundsfilmer på sin hemsida. En film som underlättade var "Responsive Video Background Tutorial" av <cite>Web Dev
+                        Simplified</cite>, länk till filmen på Youtube: <a href="https://www.youtube.com/watch?v=y9ITxSzjZUc" target="_blank">
+                        Responsive Video Background Movie</a>.</p>
+            </div>
+            <div class="film">
+                <p>
+                    En annan film jag fick hjälp av var "Create and Optimize a Self-Hosted Video Background for Free" av <cite>Jack
+                        Cao</cite>, länk till filmen på Youtube: <a href="https://www.youtube.com/watch?v=ALMrI98gGxU" target="_blank">Video Background
+                        Movie</a> I filmen beskrivs hur det går att förbättra filstorlek på filmer. Jag valde i slutändan att optimera filmen i programmet Handbrake, medan filmen hänvisar till verktygen och webbplatserna Freeconvert och Cloudconvert.
+                </p>
+            </div>
+            <div class="film">
+                <h3>Hur jag infogade min film</h3>
+                <p>
+                    Denna timelapse är från en solnedgång som jag filmade i Östersund med min GoPro. Jag infogade filmen med ett video och src element inom HTML-koden. Jag valde attributen muted, loop och autoplay samt playsinline för videon. För att den ska loopas och inte
+                    ha något ljud, samt startas automatiskt när sidan laddas in.</p>
+            </div>
+            <div class="film">
+                <p>
+                    För att få rätt dimensioner på videocontainer använde jag CSS-egenskaperna min-width: 100vw och min-height med värdet 100vh för att täcka hela skärmen. Overflow sattes till hidden. Slutligen på själva videon använde jag object-fit: cover. Detta tillsammans
+                    med position: fixed.
+                </p>
+            </div>
+            <div class="program">
+                <h3>Program som jag tog hjälp av</h3>
+                <p>Programmet DaVinci Resolve tog jag hjälp av för att klippa orginalfilmen samt öka hastigheten. Filmen var ursprungligen 30 sekunder lång men den klipptes ned till 12 sekunder i första utkastet, och i slutändan blev den 8 sekunder lång.
+                    I programmet valde jag också att rendera filen från upplösningen 3840x2160 ned till 1920x1080. I exporteringen valde jag codec H.264. De här två åtgärderna bidrog till att minska filstorleken från 217 MB (MegaByte) till 7 MB. </p>
+            </div>
+            <div class="program">
+                <p>Programmet HandBrake gjorde att jag kunde optimera filstorleken för filmen ytterligare. Filmen fick upplösningen 1280 x 720 och resultatet blev en slutlig filstorlek på 1.6 MB.</p>
+            </div>
+            <div class="reflections">
+                <h3>Slutsatser</h3>
+                <p>Inom mobilläget har jag justerat upp bakgrundsfärgen genom CSS för filmen och gjort den mer ljusare. Den upplevdes alldeles för mörkt innan när man besökte hemsidan och det gick inte bra ihop med den lägre kvaliten jag valde på filmen
+                    när jag eftersträvade en lägre filstorlek. Jag valde att infoga en knapp för att pausa/spela filmen samt en toggle för att justera uppspelningshastigheten. Detta för att förbättra upplevelsen till besökarna, vissa användare kanske
+                    vill ändra hastigheten på filmen om den upplevs för starkt, eller för att kunna pausa.</p>
+            </div>
+            <div class="reflections">
+                <p>
+                    Jag tyckte detta var en rolig uppgift och särskilt med infogandet av javascript (som inte är något krav). Jag kunde experimentera en del och tyckte resultatet längst ned på sidan, vid horisonten, blev bäst på filmen även fast kvaliteten inte är optimal.
+                    Där ser man kontrasten mellan himmel och mark. Jag valde att exkludera en del och beskära filmen eftersom det är hus under horisonten som inte är relevanta. Himlen och solnedgången var det viktiga i denna bakgrundsfilm och det var
+                    det jag ville framhäva.
+                </p>
+            </div>
+            <div class="reflections">
+                <p>
+                    Jag valde att infoga en poster-bild om bakgrundsfilmen skulle laddas långsamt. Avslutningsvis blev övergången i klippet, från slutet av filmen tillbaka till början, inte optimal. Det är svårt när det är olika färger på himlen eftersom filmen är en timelapse
+                    från olika tider på kvällen. Det hade varit snyggt om jag filmat i 24 timmar. Men filmen hade nog blivit för stor storlek.
+                </p>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li>Copyright &copy; 2025 Filip Bergander</li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+
+</html>

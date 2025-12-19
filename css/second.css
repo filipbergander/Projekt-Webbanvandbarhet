@@ -1,0 +1,427 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      background-color: #ac560686;
+  }
+  
+  h1 {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      color: rgb(0, 0, 0);
+      background-color: rgb(247, 148, 0);
+      padding: 1.5rem;
+      border-radius: 1px;
+      display: flex;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+  }
+  
+  nav {
+      background-color: #272832;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 15;
+  }
+  
+  nav li {
+      display: flex;
+  }
+  
+  nav ul {
+      list-style: none;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+  }
+  
+  nav a {
+      flex: 1;
+      display: flex;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      padding: 1.6rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 800;
+  }
+  
+  nav a:hover {
+      background-color: rgba(247, 148, 0, 0.877);
+      transition: .3s;
+  }
+  
+  nav a:focus {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+  }
+  
+  nav a:active {
+      background-color: black;
+  }
+  
+  #open-sidebarbutton,
+  #close-sidebarbutton {
+      display: none;
+  }
+  
+  .videocontainer {
+      position: relative;
+      min-width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      flex: 1;
+      background: rgba(255, 174, 0, 0.274);
+  }
+  
+  .videocontainer video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      object-position: bottom;
+  }
+  
+  #minVideo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+  }
+  
+  .content {
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 45%;
+      background-color: #2728329d;
+      padding: 1rem;
+      z-index: 4;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 15px;
+      line-height: 1.6;
+      margin-bottom: 5rem;
+      max-width: 60ch;
+      overflow-y: auto;
+      min-width: 700px;
+  }
+  
+  .content a,
+  .programlink a {
+      text-decoration: none;
+      font-weight: 700;
+  }
+  
+  .content a:link,
+  .programlink:link {
+      color: rgb(0, 255, 255);
+  }
+  
+  .content a:visited,
+  .programlink:visited {
+      color: rgb(255, 123, 0);
+  }
+  
+  .content a:hover,
+  .programlink:hover {
+      color: rgb(255, 255, 255);
+      background-color: rgb(17, 0, 255);
+      border-radius: 5px;
+  }
+  
+  .content a:active,
+  .programlink:active {
+      color: rgb(0, 255, 255);
+  }
+  
+  .content a:focus,
+  .programlink:focus {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+  }
+  
+  .firstp,
+  .film,
+  .film div,
+  .program,
+  .program div,
+  .reflections,
+  .reflections div {
+      background-color: rgba(189, 189, 30, 0);
+      margin-top: 1rem;
+      padding: 0.2rem;
+      border-radius: 5px;
+      font-weight: 400;
+  }
+  
+  #minKnapp {
+      margin: 1rem;
+      background-color: rgb(255, 255, 255);
+      font-weight: 800;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      cursor: pointer;
+  }
+  
+  #minKnapp:hover {
+      background-color: rgba(247, 148, 0, 0.877);
+      color: white;
+  }
+  
+  #minKnapp:active {
+      background-color: rgb(0, 0, 0);
+  }
+  
+  #minKnapp:focus {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+  }
+  
+  .motionarea {
+      background-color: #ffffff;
+      margin: 1rem;
+      font-weight: 800;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      min-width: 17.5rem;
+      max-width: 23.5rem;
+      color: #000000;
+  }
+  
+  footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      background-color: #272832;
+      margin-top: 2rem;
+      flex: 1;
+  }
+  
+  footer ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: row;
+      font-size: 1rem;
+      font-weight: 500;
+  }
+  
+  #overlay {
+      background-color: rgba(0, 0, 0, 0.774);
+      z-index: 14;
+      position: fixed;
+      inset: 0;
+      display: none;
+  }
+  
+  .frontpage h2 {
+      margin: 2rem 0 1rem 0;
+  }
+  
+  .frontpage {
+      position: relative;
+      min-width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      flex: 1;
+      background: rgba(255, 174, 0, 0.274);
+      text-align: center;
+  }
+  
+  .videowrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      align-items: center;
+      margin-bottom: 1rem;
+  }
+  
+  .videowrapper iframe {
+      border: 5px solid #ff73009f;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      aspect-ratio: 16/9;
+  }
+  
+  .howto {
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 45%;
+      background-color: #2728329d;
+      padding: 1rem;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 15px;
+      line-height: 1.6;
+      margin-bottom: 5rem;
+      margin-top: 1rem;
+      max-width: 60ch;
+  }
+  
+  .navlinks {
+      border-bottom: 3px solid #ff7300;
+      padding-bottom: 4px;
+  }
+  
+  @media (max-width: 876px) {
+      h1 {
+          padding: 1rem;
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+          padding: 1.3rem;
+          margin: 0;
+      }
+      header {
+          background-color: #272832;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          z-index: 600;
+      }
+      nav {
+          position: fixed;
+          align-items: unset;
+          justify-content: unset;
+          top: 0;
+          right: -100%;
+          height: 100vh;
+          width: min(15em, 100%);
+          z-index: 15;
+          border-left: 1px solid rgba(255, 255, 255, 0.384);
+          transition: right 0.4s ease-in;
+      }
+      nav.show {
+          right: 0;
+          top: 0;
+          transition: right 0.4s ease-out;
+          background-color: #272832;
+      }
+      nav.show~#overlay {
+          display: block;
+      }
+      #navbar ul {
+          display: flex;
+      }
+      nav ul {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin: 0;
+          width: 100%;
+          padding: 6rem 0 0 0;
+          flex: none;
+      }
+      nav li {
+          width: 100%;
+      }
+      nav a {
+          display: block;
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          font-weight: 600;
+          text-decoration: none;
+          color: #fff;
+          flex: none;
+      }
+      #open-sidebarbutton {
+          position: sticky;
+          display: block;
+          margin-left: auto;
+          border: none;
+          cursor: pointer;
+          padding: 0.5rem;
+          background: none;
+          color: rgb(255, 255, 255);
+          z-index: 10;
+      }
+      #close-sidebarbutton {
+          display: block;
+          position: absolute;
+          background: none;
+          border: none;
+          top: 1rem;
+          left: 1rem;
+          cursor: pointer;
+          padding: 0.5rem;
+          z-index: 25;
+      }
+      .videocontainer {
+          background: rgba(255, 174, 0, 0.42);
+      }
+      .content {
+          width: 95%;
+          padding: 0.2rem;
+          font-size: 1rem;
+          font-weight: 400;
+          border-radius: 5px;
+          height: auto;
+          margin-bottom: 5rem;
+          min-width: 200px;
+      }
+      #minKnapp {
+          margin-top: 2rem;
+          font-weight: 600;
+          padding: 0.5rem 1rem;
+          border-radius: 15px;
+          font-size: 0.9rem;
+      }
+      .motionarea {
+          font-weight: 600;
+          font-size: 0.9rem;
+          min-width: 12rem;
+          max-width: 14rem;
+      }
+      .videowrapper {
+          width: 95%;
+      }
+      .videowrapper iframe {
+          width: 100%;
+      }
+      .howto {
+          width: 70%;
+      }
+      footer {
+          margin-top: 2rem;
+      }
+      footer ul {
+          gap: 0.5rem;
+          font-size: 0.9rem;
+          line-height: 1.2;
+      }
+      .navlinks {
+          border-bottom: none;
+          border-left: 3px solid #ff7300;
+      }
+  }

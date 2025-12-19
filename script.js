@@ -2,6 +2,8 @@
 
 const navbar = document.getElementById("navbar");
 
+const main = document.querySelector(".main-content");
+
 const openButton = document.getElementById("open-sidebarbutton");
 
 const closeButton = document.getElementById("close-sidebarbutton");
@@ -27,6 +29,7 @@ updateNavbar(); // funktionen körs när sidan laddas
 
 function openSidebar() {
     navbar.classList.add("show"); // För att visa sidomenyn
+    overlay.classList.add("show");
     openButton.setAttribute("aria-expanded", "true"); // Ändrar aria-expanded till true när sidomenyn är öppen
     overlay.style.display = "block"; // Visar overlay när sidomenyn är öppen, vilket leder till att bakgrundsinnehållet blir mörkt
     if (mobileQuery.matches) {
@@ -38,6 +41,7 @@ function openSidebar() {
 
 function closeSidebar() {
     navbar.classList.remove("show"); // För att dölja sidomenyn
+    overlay.classList.remove("show");
     openButton.setAttribute("aria-expanded", "false"); // Ändrar aria-expanded till false när sidomenyn är stängd
     overlay.style.display = "none"; // Dölj overlay när sidomenyn är stängd
     if (mobileQuery.matches) {
@@ -49,7 +53,7 @@ function closeSidebar() {
     }
 }
 
-const navigateLinks = document.querySelectorAll('nav a'); // Alla länkar i sidomenyn
+const navigateLinks = document.querySelectorAll(".nav-link"); // Alla länkar i sidomenyn
 navigateLinks.forEach(link => { // Stänger sidomenyn när en länk i menyn klickas
     link.addEventListener("click", () => {
         if (mobileQuery.matches) {
