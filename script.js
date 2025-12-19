@@ -10,7 +10,7 @@ const closeButton = document.getElementById("close-sidebarbutton");
 
 const overlay = document.getElementById("overlay");
 
-const mobileQuery = window.matchMedia("(max-width: 900px)"); // Matchar om skärmen är mindre än 876px, alltså mobilläge
+const mobileQuery = window.matchMedia("(max-width: 920px)"); // Matchar om skärmen är mindre än 876px, alltså mobilläge
 
 mobileQuery.addEventListener("change", (e) => updateNavbar(e)); // Lyssnar efter ändringar i skärmstorlek
 
