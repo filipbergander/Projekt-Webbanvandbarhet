@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Färdtjänst i Sundsvall</title>
+    <title>Avbokad resa</title>
     <meta name="description" content="Boka din färdtjänstresa här i Sundsvall via vår bokningstjänst.">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -89,26 +89,54 @@
         </button>
         <div id="overlay" aria-hidden="true" onclick="closeSidebar()"></div>
     </header>
+    <div class="sub-header">
+        <nav aria-label="Brödsmulor-navigering">
+            <ol class="breadcrumbs">
+                <li><a href="index.html" class="breadcrumb-item">Hem > </a></li>
+                <li aria-current="page" class="breadcrumb-item">Mina resor</li>
+            </ol>
+        </nav>
+        <aside aria-hidden="true" class="lang"> <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#1f1f1f">
+                <path
+                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
+            </svg>
+            <span class="lang-text">Språk</span>
+        </aside>
+    </div>
     <main class="main-content">
         <h1>
-            dadada
-
+            Mina resor
         </h1>
-        <footer>
-            <nav class="footer-area">
-                <ul>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
-                            <path
-                                d="M480-440q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0-80q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0 440q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-400Zm0-315-240 90v189q0 54 15 105t41 96q42-21 88-33t96-12q50 0 96 12t88 33q26-45 41-96t15-105v-189l-240-90Zm0 515q-36 0-70 8t-65 22q29 30 63 52t72 34q38-12 72-34t63-52q-31-14-65-22t-70-8Z" />
-                        </svg><a href="integritetspolicy.html">Integritetspolicy</a></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
-                            <path
-                                d="m240-60-64-48 104-139v-213q0-31 5.5-68.5T300-596l-60 34v142h-80v-188l216-123q8-5 17-7t19-2q24 0 44 12t30 33l31 67q20 44 61 66t102 22v80h-39L860-78l-35 20-237-413q-40-13-72.5-37.5T460-568q-10 29-15.5 66.5T441-432l79 112v260h-80v-200l-71-102-9 142L240-60Zm220-700q-33 0-56.5-23.5T380-840q0-33 23.5-56.5T460-920q33 0 56.5 23.5T540-840q0 33-23.5 56.5T460-760Z" />
-                        </svg><a href="tillgänglighet.html">Tillgänglighet</a></li>
-                </ul>
-            </nav>
-        </footer>
+        <button class="btn-primary" onclick="location.href='boka-enkel.html'">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" height="30px" viewBox="0 -960 960 960"
+                    width="30px">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                </svg></span>
+            <span>Boka ny resa</span></button>
+        <section>
+            <h2>Du har avbokat din resa</h2>
+            <p>Du har inga kommande resor</p>
+        </section>
     </main>
+    <footer>
+        <nav class="footer-area">
+            <ul>
+                <li><a href="integritetspolicy.html" aria-current="page"><span class="icon" aria-hidden="true"><svg
+                                xmlns="http://www.w3.org/2000/svg" class="nav-icon" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#fff">
+                                <path
+                                    d="M480-440q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0-80q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0 440q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-400Zm0-315-240 90v189q0 54 15 105t41 96q42-21 88-33t96-12q50 0 96 12t88 33q26-45 41-96t15-105v-189l-240-90Zm0 515q-36 0-70 8t-65 22q29 30 63 52t72 34q38-12 72-34t63-52q-31-14-65-22t-70-8Z" />
+                            </svg></span><span class="label">Integritetspolicy</span></a></li>
+                <li><a href="tillganglighet.html" class="link-footer"><span class="icon" aria-hidden="true"><svg
+                                xmlns="http://www.w3.org/2000/svg" class="nav-icon" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#fff">
+                                <path
+                                    d="m240-60-64-48 104-139v-213q0-31 5.5-68.5T300-596l-60 34v142h-80v-188l216-123q8-5 17-7t19-2q24 0 44 12t30 33l31 67q20 44 61 66t102 22v80h-39L860-78l-35 20-237-413q-40-13-72.5-37.5T460-568q-10 29-15.5 66.5T441-432l79 112v260h-80v-200l-71-102-9 142L240-60Zm220-700q-33 0-56.5-23.5T380-840q0-33 23.5-56.5T460-920q33 0 56.5 23.5T540-840q0 33-23.5 56.5T460-760Z" />
+                            </svg></span><span class="label">Tillgänglighet</span></a></li>
+            </ul>
+        </nav>
+    </footer>
+
 </body>
 
 </html>

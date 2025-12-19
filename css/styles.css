@@ -9,6 +9,16 @@
             font-size: 1.125rem;
         }
         
+        h1 {
+            font-size: 2rem;
+            font-weight: normal;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+        
         header {
             display: flex;
             text-decoration: none;
@@ -138,6 +148,14 @@ select {
             font-size: 1rem;
         }
         
+        .sub-header-login {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        
         .breadcrumbs {
             display: flex;
             gap: 0.5rem;
@@ -168,8 +186,23 @@ select {
         }
         
         main {
-            width: 100%;
-            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .login-form {
+            text-align: left;
+            align-items: center;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 20rem;
+            margin-top: 2rem;
+            border-radius: 10px;
+            border: 1px solid #000;
+            background: var(--beige-primr, #E5D0AC);
         }
         
         #open-sidebarbutton,
@@ -183,6 +216,70 @@ select {
             position: fixed;
             inset: 0;
             display: none;
+        }
+        
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: normal;
+            font-style: normal;
+            margin-top: 1rem;
+            width: 12.5rem;
+            height: 3.125rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem;
+            background-color: #006CFF;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 12px;
+            border: 1px solid #000;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            letter-spacing: 1px;
+        }
+        
+        .btn-secondary-green,
+        .btn-secondary-blue {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+            letter-spacing: 1px;
+            line-height: normal;
+            font-style: normal;
+            margin-top: 1rem;
+            width: 10rem;
+            height: 3rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem;
+            background-color: #006CFF;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 12px;
+            border: 1px solid #000;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-secondary-blue {
+            background-color: #28A745;
+        }
+        
+        .btn-secondary-blue:hover,
+        .btn-secondary-green:hover,
+        .btn-secondary-blue:focus,
+        .btn-secondary-green:focus,
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:hover .btn-icon,
+        .btn-primary:focus .btn-icon {
+            background-color: #ffffff;
+            color: #000000;
+            fill: #000000;
+        }
+        
+        .btn-icon {
+            fill: white;
         }
         
         .footer-area {
@@ -207,6 +304,16 @@ select {
         .footer-area a {
             text-decoration: none;
             color: #ffffff;
+            padding: 1rem;
+        }
+        
+        .footer-area a:hover .nav-icon,
+        .footer-area a:focus .nav-icon,
+        .footer-area a:hover,
+        .footer-area a:focus {
+            background-color: #ffffff;
+            color: #000000;
+            fill: #000000;
         }
         
         @media (max-width: 920px) {
@@ -295,6 +402,10 @@ select {
             .nav-link[aria-current="page"] {
                 border-bottom: none;
                 border-left: 5px solid #ffffff;
+            }
+            .link-footer[aria-current="page"] {
+                border-bottom: none;
+                border-top: 5px solid #ffffff;
             }
             .nav-icon {
                 fill: #ffffff;
