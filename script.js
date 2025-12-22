@@ -1,5 +1,6 @@
 "use strict";
 
+console.log("JS laddad");
 const navbar = document.getElementById("navbar");
 
 const main = document.querySelector(".main-content");
@@ -12,10 +13,10 @@ const overlay = document.getElementById("overlay");
 
 const mobileQuery = window.matchMedia("(max-width: 920px)"); // Matchar om skärmen är mindre än 876px, alltså mobilläge
 
-mobileQuery.addEventListener("change", (e) => updateNavbar(e)); // Lyssnar efter ändringar i skärmstorlek
+mobileQuery.addEventListener("change", updateNavbar); // Lyssnar efter ändringar i skärmstorlek
 
-function updateNavbar(e) {
-    const trueMobile = e.matches; // Stämmer om besökaren är i mobilläge
+function updateNavbar() {
+    const trueMobile = mobileQuery.matches; // Stämmer om besökaren är i mobilläge
     if (trueMobile) { // Innehållet, main och nav, ska vara interaktiva från början i mobilläge
         main.removeAttribute("inert")
         navbar.removeAttribute("inert");
@@ -79,8 +80,71 @@ function displayReturnTime() {
         });
     });
 }
-
 displayReturnTime();
+
+
+
+function recurringTravel() {
+    const recurringBtn = document.querySelector(".recurring-btn");
+    if (!recurringBtn) return;
+
+
+    recurringBtn.addEventListener("click", () => {
+        console.log("Klickat på knappen");
+        // Hämta radiobutton som är vald
+        const selected = document.querySelector("input[name='recurring']:checked");
+
+        if (!selected) {
+            alert("Välj om resan ska vara återkommande eller inte.");
+            return;
+        }
+
+        if (selected.value === "Ja") {
+            window.location.href = "boka-kommande.html";
+        } else {
+            window.location.href = "boka-tillval.html";
+        }
+    });
+
+}
+recurringTravel();
+
+const weeklyTrip = document.getElementById("weekly-trip");
+const weekDays = document.querySelector(".weekdays");
+
+if (weeklyTrip || weekDays) {
+    weeklyTrip.addEventListener("change", () => {
+        if (weeklyTrip.checked) {
+            weekDays.classList.add("show");
+        } else {
+            weekDays.classList.remove("show");
+        }
+    })
+}
+
+
+
+
+
+
+
+/* const selected = document.querySelector("input[name='recurring']:checked");
+
+        if (!selected) {
+            alert("Vänligen välj ett alternativ för återkommande resa.");
+            return;
+        }
+
+        if (selected.value === "Ja") {
+            window.location.href = "boka-kommande.html";
+        } else {
+            window.location.href = "boka-tillval.html";
+        }
+    });
+}*/
+
+
+
 /*
 const timeButtons = document.querySelectorAll(".quick-time");
 
@@ -102,4 +166,4 @@ timeButtons.forEach(btn => {
             btn.addEventListener("click", () => {
                 pickupTime.value = btn.dataset.time;
             });
-        });*/
+        }); */

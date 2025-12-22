@@ -210,7 +210,8 @@ select {
     
     .travel-container,
     .coming-container,
-    .form-container {
+    .form-container,
+    .book-container {
         display: flex;
         width: 25vw;
         height: 75vh;
@@ -241,6 +242,13 @@ select {
     .coming-container,
     .form-container {
         background-color: #E5D0AC;
+        min-height: auto;
+        width: 45%;
+        height: 100%;
+    }
+    
+    .book-container {
+        background-color: rgba(229, 208, 172, 0.50);
         min-height: auto;
         width: 45%;
         height: 100%;
@@ -299,6 +307,7 @@ select {
     }
     
     .btn-primary,
+    .btn-primary-green,
     .btn-primary-darkgreen {
         display: flex;
         align-items: center;
@@ -318,13 +327,15 @@ select {
         border: 1px solid #000;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         letter-spacing: 1px;
+        white-space: nowrap;
     }
     
     .btn-secondary-green,
     .btn-secondary-blue,
     .btn-secondary-red,
     .btn-secondary-darkgreen,
-    .btn-secondary-grey {
+    .btn-secondary-grey,
+    .recurring-btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -344,6 +355,7 @@ select {
         border-radius: 12px;
         border: 1px solid #000;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
     }
     
     .btn-secondary-red {
@@ -352,6 +364,7 @@ select {
     
     .btn-secondary-darkgreen {
         background-color: #3E7F4C;
+        width: 60%;
     }
     
     .btn-primary-darkgreen {
@@ -360,8 +373,16 @@ select {
         margin-top: 3rem;
     }
     
+    .btn-primary-green,
     .btn-secondary-green {
         background-color: #28A745;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    
+    .recurring-btn {
+        background-color: #28A745;
+        margin: 0 auto;
     }
     
     .btn-secondary-grey {
@@ -383,7 +404,11 @@ select {
     .btn-secondary-grey:hover,
     .btn-secondary-grey:focus,
     .back-button:hover,
-    .back-button:focus {
+    .back-button:focus,
+    .recurring-btn:hover,
+    .recurring-btn:focus,
+    .exit-button:hover,
+    .exit-button:focus {
         background-color: #ffffff;
         color: #000000;
         fill: #000000;
@@ -397,7 +422,19 @@ select {
     }
     
     .btn-primary:hover .btn-icon,
-    .btn-primary:focus .btn-icon {
+    .btn-primary:focus .btn-icon,
+    .btn-secondary-green:hover .btn-icon,
+    .btn-secondary-green:focus .btn-icon,
+    .btn-secondary-red:hover .btn-icon,
+    .btn-secondary-red:focus .btn-icon,
+    .btn-secondary-darkgreen:hover .btn-icon,
+    .btn-secondary-darkgreen:focus .btn-icon,
+    .btn-secondary-grey:hover .btn-icon,
+    .btn-secondary-grey:focus .btn-icon,
+    .btn-primary-darkgreen:hover .btn-icon,
+    .btn-primary-darkgreen:focus .btn-icon,
+    .recurring-btn:hover .btn-icon,
+    .recurring-btn:focus .btn-icon {
         background-color: #ffffff;
         fill: #000000;
     }
@@ -444,10 +481,38 @@ select {
         margin: 1rem 0 0.5rem 0;
     }
     
-    .radio-group input[type="radio"] {
+    .form-group input[type="radio"] {
         transform: scale(2);
         margin-right: 1rem;
         cursor: pointer;
+    }
+    
+    .trip-option {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+    
+    .recurring-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .recurring-container input[type="radio"] {
+        transform: scale(2);
+        margin-right: 1rem;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 2rem;
+    }
+    
+    .recurring-group {
+        display: flex;
+        gap: 4rem;
     }
     
     .travel-form label {
@@ -460,6 +525,10 @@ select {
         flex-direction: column;
         margin-bottom: 1rem;
         width: 80%;
+    }
+    
+    .inputs-adress input[type="text"] {
+        font-size: 1rem;
     }
     
     .input-icon input[type="text"] {
@@ -486,14 +555,16 @@ select {
     .inputs-dates input[type="date"] {
         padding: 1rem;
         margin-top: 0rem;
+        font-size: 1rem;
     }
     
     .times-row {
         display: flex;
         flex-direction: row;
-        gap: 3rem;
         margin: 0 auto;
-        margin-bottom: 3rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
     
     .return-row,
@@ -501,14 +572,24 @@ select {
         display: none;
     }
     
-    .return-row.show,
-    .return-time.show {
+    .text-time {
+        align-items: center;
+        margin-top: 2rem;
+    }
+    
+    .return-row.show {
         display: flex;
         flex-direction: row;
-        gap: 3rem;
+        gap: 1rem;
         margin: 0 auto;
         margin-bottom: 0rem;
-        transition: 1s ease-in-out;
+        width: 100%;
+    }
+    
+    .return-time.show {
+        display: inline;
+        align-items: center;
+        margin-top: 2rem;
     }
     
     .inputs-time {
@@ -518,12 +599,8 @@ select {
     }
     
     .inputs-time input[type="time"] {
+        font-size: 1rem;
         padding: 1rem 2rem 1rem 1rem;
-    }
-    
-    .text-time {
-        margin: 0 auto;
-        margin-top: 2rem;
     }
     
     .quick-time {
@@ -550,14 +627,32 @@ select {
     }*/
     
     .note {
-        font-weight: 400;
+        font-size: 0.9em;
+        font-weight: 500;
+        margin-top: 0rem;
+        line-height: 0.5;
     }
     
-    .radio-group input[type="checkbox"] {
+    .recurring-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    
+    .form-group input[type="checkbox"] {
         transform: scale(2.5);
         margin-right: 1rem;
         cursor: pointer;
         margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .form-group legend {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
     
     .travel-form textarea {
@@ -569,7 +664,8 @@ select {
         box-sizing: border-box;
     }
     
-    .back-button {
+    .back-button,
+    .exit-button {
         display: flex;
         align-items: center;
         padding: 0.3rem;
@@ -577,6 +673,32 @@ select {
         margin-right: auto;
         margin-top: 3rem;
         margin-left: 0.5rem;
+        font-weight: 600;
+        background-color: rgb(255, 255, 255);
+        margin-top: auto;
+        cursor: pointer;
+    }
+    
+    .exit-button {
+        margin-left: auto;
+    }
+    
+    .weekly-container {
+        margin-top: 2.5rem;
+    }
+    
+    .weekdays {
+        display: none;
+    }
+    
+    .weekdays.show {
+        display: block;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .weekdays input[type="checkbox"] {
+        margin-bottom: 2.5rem;
     }
     
     .footer-area {
@@ -742,10 +864,11 @@ select {
         }
         .travel-container,
         .coming-container,
-        .form-container {
+        .form-container,
+        .book-container {
             max-width: 500px;
             min-width: 0;
-            min-height: auto;
+            min-height: 400px;
             width: 95%;
             height: 100%;
         }
@@ -762,8 +885,13 @@ select {
         .travel-form {
             width: 80%;
         }
-        .inputs-adress {
-            width: 100%;
+        .inputs-adress,
+        .inputs-dates,
+        .times-row,
+        .return-row,
+        .inputs-time,
+        .return-row.show {
+            width: 90%;
         }
         @media screen and (max-width: 500px) {
             .footer-area ul {
@@ -779,6 +907,16 @@ select {
             }
             .breadcrumbs a {
                 font-size: 0.875rem;
+            }
+            .times-row,
+            .return-row.show,
+            .return-time.show {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            .note {
+                line-height: 1.2rem;
             }
         }
     }

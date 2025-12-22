@@ -109,15 +109,29 @@
             Ändra din resa
         </h1>
         <section class="form-container">
-            <h2>Ändra detaljer för din resa</h2>
+            <h2><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000">
+                    <path
+                        d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                </svg>Ändra detaljer för din resa</h2>
             <form class="travel-form">
-                <fieldset class="radio-group">
+                <fieldset class="form-group">
                     <legend>
-                        Hur vill du resa?
+                        Ändra din resa?
                     </legend>
-                    <label><input type="radio" required name="trip" value="Enkelresa">Enkelresa</label>
-                    <label><input type="radio" name="trip" value="Tur och retur" onclick="displayReturnTime()">Tur och
-                        retur</label>
+                    <label class="trip-option"><input type="radio" required name="trip" value="Enkelresa"><svg
+                            xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                        </svg><span>Enkelresa</span></label>
+                    <label class="trip-option">
+                        <input type="radio" name="trip" value="Tur och retur" onclick="displayReturnTime()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" />
+                        </svg>
+                        <span>Tur och retur</span>
+                    </label>
                 </fieldset>
 
                 <div class="inputs-adress">
@@ -126,7 +140,7 @@
                             <path
                                 d="M516-120 402-402 120-516v-56l720-268-268 720h-56Zm26-148 162-436-436 162 196 78 78 196Zm-78-196Z" />
                         </svg>
-                        <input id="from-adress" type="text" name="from-adress" autocomplete="address" placeholder="Skriv adress...">
+                        <input id="from-adress" type="text" name="from-adress" autocomplete="street-address" placeholder="Skriv adress...">
                     </div>
 
                 </div>
@@ -137,7 +151,7 @@
                             <path
                                 d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
                         </svg>
-                        <input id="to-adress" type="text" name="to-adress" autocomplete="address" placeholder="Skriv adress...">
+                        <input id="to-adress" type="text" name="to-adress" autocomplete="street-address" placeholder="Skriv adress...">
                     </div>
 
                 </div>
@@ -151,10 +165,13 @@
                         </svg> <input id="date" type="date" name="date">
                     </div>
                 </div>
-                <p class="text-time">Vilken tid vill du bli upphämtad? </p>
+                <p class="text-time"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path
+                            d="M582-298 440-440v-200h80v167l118 118-56 57ZM440-720v-80h80v80h-80Zm280 280v-80h80v80h-80ZM440-160v-80h80v80h-80ZM160-440v-80h80v80h-80ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                    </svg>Vilken tid vill du bli upphämtad? </p>
                 <div class="times-row">
                     <div class="inputs-time">
-                        <label>Snabbval</label>
+                        <label>Snabbval av tid</label>
                         <button type="button" class="quick-time" data-target="pickup-time" data-time="10:00">10:00</button>
                     </div>
                     <div class="inputs-time">
@@ -172,10 +189,10 @@
                     </div>
                 </div> -->
 
-                <p class="return-time">Välj tid för din returresa </p>
+                <p class="return-time">Vilken tid för din returresa? </p>
                 <div class="return-row">
                     <div class="inputs-time">
-                        <label>Snabbval</label>
+                        <label>Snabbval av tid</label>
                         <button type="button" class="quick-time" data-target="return-time" value="16:00" data-time="16:00">16:00</button>
                     </div>
                     <div class="inputs-time">
@@ -183,8 +200,13 @@
                         <input id="return-time" type="time" name="return_time" list="return-times">
                     </div>
                 </div>
-                <button type="button" class="btn-primary-darkgreen" onclick="location.href='andra-resa.html'">Spara
-                    ändringar</button>
+                <button type="button" class="btn-primary-darkgreen" onclick="location.href='andra-resa.html'"><span>
+                        Spara
+                        ändringar
+                    </span><span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            class="btn-icon" width="24px" fill="#fff">
+                            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                        </svg></span></button>
             </form>
             <button class="back-button" type="button" onclick="history.back()">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"

@@ -106,10 +106,65 @@
     </div>
     <main class="main-content">
         <h1> Boka färdtjänst</h1>
-        <section>
-            <h2>Återkommande resa</h2>
+        <section class="book-container">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
+                    <path
+                        d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z" />
+                </svg>Återkommande resa</h2>
+            <form class="travel-form">
+                <fieldset class="form-group">
+                    <legend>Resor kan bokas maximalt en månad framåt.</legend>
+                    <div class="weekly-container">
+                        <input type="checkbox" class="weekly-box" id="weekly-trip" required name="weekly-trip" value="Återkommande resa">
+                        <label for="weekly-trip">Resan ska återkomma varje vecka</label>
+                    </div>
+                    <div class="weekdays">
+                        <p>Välj veckodagar som resan ska återkomma</p>
+                        <div>
+                            <input type="checkbox" id="monday" name="weekday" value="Måndag">
+                            <label for="monday">Måndag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tuesday" name="weekday" value="Tisdag">
+                            <label for="tuesday">Tisdag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="wednesday" name="weekday" value="Onsdag">
+                            <label for="wednesday">Onsdag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="thursday" name="weekday" value="Torsdag">
+                            <label for="thursday">Torsdag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="friday" name="weekday" value="Fredag">
+                            <label for="friday">Fredag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="saturday" name="weekday" value="Lördag">
+                            <label for="saturday">Lördag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sunday" name="weekday" value="Söndag">
+                            <label for="sunday">Söndag</label>
+                        </div>
+                        <button type="button" class="btn-secondary-green" onclick="location.href='boka-tillval.html'">
+                            <span>Nästa
+                                steg</span><span><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#fff" class="btn-icon">
+                                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                                </svg></span></button>
+                    </div>
+                </fieldset>
+            </form>
+            <button class="back-button" type="button" onclick="history.back()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f" aria-hidden="true">
+                    <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                </svg>
+                <p>Tillbaka</p>
+            </button>
         </section>
-
     </main>
     <footer>
         <nav class="footer-area">
