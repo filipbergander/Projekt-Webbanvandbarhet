@@ -108,9 +108,34 @@
         <h1>
             Ändra din resa
         </h1>
-        <section>
+        <section class="form-container">
             <h2>Ändra dina tillval</h2>
+            <form class="travel-form">
+                <fieldset class="radio-group">
+                    <legend>Välj tillval för din resa</legend>
+                    <label><input type="checkbox" required name="trip" value="Enkelresa">Rullstol</label>
+                    <label><input type="checkbox" name="trip">Medresenär</label>
+                    <label><input type="checkbox" required name="trip" value="Enkelresa">Ledsagare
+                        <span class="note">För
+                            ledsagare krävs tillstånd.</span></label>
+                    <label><input type="checkbox" name="trip">SMS-bekräftelse för resan</label>
 
+                    <div>
+                        <label for="message">Meddelande till chauffören:</label><br>
+                        <!-- En ruta för att kunna skriva kommentarer/meddelande i kontaktformuläret. -->
+                        <textarea id="message" name="message" cols="50" rows="8" placeholder="Skriv ditt meddelande..."></textarea>
+                    </div>
+                </fieldset>
+                <button type="button" class="btn-primary-darkgreen" onclick="location.href='andra-resa.html'">Spara
+                    ändringar</button>
+            </form>
+            <button class="back-button" type="button" onclick="history.back()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f" aria-hidden="true">
+                    <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                </svg>
+                <p>Tillbaka</p>
+                </div>
         </section>
     </main>
     <footer>

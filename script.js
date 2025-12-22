@@ -61,3 +61,45 @@ navigateLinks.forEach(link => { // Stänger sidomenyn när en länk i menyn klic
         }
     });
 });
+
+function displayReturnTime() {
+    const returnCheckbox = document.querySelectorAll("input[name='trip']");
+    const returnRow = document.querySelector(".return-row");
+    const returnText = document.querySelector(".return-time");
+
+    returnCheckbox.forEach(radio => {
+        radio.addEventListener("change", () => {
+            if (radio.value === "Tur och retur" && radio.checked) {
+                returnRow.classList.add("show");
+                returnText.classList.add("show");
+            } else {
+                returnRow.classList.remove("show");
+                returnText.classList.remove("show");
+            }
+        });
+    });
+}
+
+displayReturnTime();
+/*
+const timeButtons = document.querySelectorAll(".quick-time");
+
+timeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        openButton.classList.toggle("selected");
+        timeButtons.value = returnTime.innerHTML;
+        const targetInputId = button.dataset.target; 
+        const input = document.getElementById(targetInputId);
+        input.value = button.dataset.time; 
+    });
+});
+
+/*
+        const pickupTime = document.getElementById("pickup-time");
+        const timeBtns = document.querySelectorAll(".quicktime");
+
+        timeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                pickupTime.value = btn.dataset.time;
+            });
+        });*/
