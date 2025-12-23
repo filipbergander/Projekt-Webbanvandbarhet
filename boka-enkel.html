@@ -134,7 +134,7 @@
                             <path
                                 d="M516-120 402-402 120-516v-56l720-268-268 720h-56Zm26-148 162-436-436 162 196 78 78 196Zm-78-196Z" />
                         </svg>
-                        <input id="from-adress" type="text" name="from-adress" autocomplete="street-address" placeholder="Skriv adress...">
+                        <input id="from-adress" type="text" name="from-acdress" autocomplete="section-from address-line1" placeholder="Skriv adress...">
                     </div>
                 </div>
                 <div class="inputs-adress">
@@ -144,7 +144,7 @@
                             <path
                                 d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
                         </svg>
-                        <input id="to-adress" type="text" name="to-adress" autocomplete="street-address" placeholder="Skriv adress...">
+                        <input id="to-adress" type="text" name="to-address" autocomplete="section-to address-line1" placeholder="Skriv adress...">
                     </div>
                 </div>
                 <div class="inputs-dates">
@@ -167,7 +167,7 @@
                     </div>
                     <div class="inputs-time">
                         <label for="pickup-time">Välj tid</label>
-                        <input id="pickup-time" type="time" name="pickup_time" list="quick-times">
+                        <input id="pickup-time" type="time" name="pickup_time">
                     </div>
                 </div>
                 <!--    <div class="inputs-adress">
@@ -192,7 +192,7 @@
                     </div>
                     <div class="inputs-time">
                         <label for="return-time">Välj tid</label>
-                        <input id="return-time" type="time" name="return_time" list="return-times">
+                        <input id="return-time" type="time" name="return_time">
                     </div>
                 </div>
                 <div class="recurring-container">
@@ -201,7 +201,7 @@
                                 d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z" />
                         </svg>Vill du göra din resa återkommande?</p>
                     <div class="recurring-group">
-                        <label><input type="radio" required name="recurring" value="Nej" required>Nej</label>
+                        <label><input type="radio" name="recurring" value="Nej" required>Nej</label>
                         <label><input type="radio" name="recurring" required value="Ja">Ja</label>
                     </div>
                 </div>
@@ -217,8 +217,8 @@
                     fill="#1f1f1f" aria-hidden="true">
                     <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
                 </svg>
-                <p>Tillbaka</p>
-                </div>
+                <span>Tillbaka</span>
+            </button>
         </section>
     </main>
     <footer>
