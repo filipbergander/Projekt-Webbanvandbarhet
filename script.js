@@ -122,6 +122,12 @@ if (weeklyTrip || weekDays) {
     })
 }
 
+document.getElementById("reset-btn").addEventListener("click", () => {
+    const msgArea = document.getElementById("message");
+    msgArea.value = '';
+    msgArea.focus();
+});
+
 
 
 
