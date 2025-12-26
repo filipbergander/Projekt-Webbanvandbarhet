@@ -530,7 +530,7 @@ header {
     font-style: normal;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #006CFF;
+    background-color: #0752BB;
     color: #ffffff;
     cursor: pointer;
     border-radius: 12px;
@@ -539,7 +539,7 @@ header {
     white-space: nowrap;
 }
 
-.btn-primary-green-index {
+.btn-primary-blue-index {
     width: 90%;
     display: inline-flex;
     align-items: center;
@@ -550,7 +550,7 @@ header {
     font-weight: 600;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #28A745;
+    background-color: #0752BB;
     color: #ffffff;
     cursor: pointer;
     border-radius: 12px;
@@ -558,7 +558,7 @@ header {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.btn-primary-green-index svg {
+.btn-primary-blue-index svg {
     margin-right: 0.5rem;
     vertical-align: middle;
 }
@@ -580,13 +580,13 @@ header {
 
 .btn-primary-green,
 .btn-secondary-green {
-    background-color: #28A745;
+    background-color: #077320;
     margin: 0 auto;
     margin-top: 2rem;
 }
 
 .recurring-btn {
-    background-color: #28A745;
+    background-color: #077320;
     margin: 0 auto;
 }
 
@@ -594,8 +594,8 @@ header {
     background-color: #5E6B78;
 }
 
-.btn-primary-green-index:hover,
-.btn-primary-green-index:focus,
+.btn-primary-blue-index:hover,
+.btn-primary-blue-index:focus,
 .btn-secondary-blue:hover,
 .btn-secondary-green:hover,
 .btn-secondary-blue:focus,
@@ -645,8 +645,8 @@ header {
 .btn-primary-darkgreen:focus .btn-icon,
 .recurring-btn:hover .btn-icon,
 .recurring-btn:focus .btn-icon,
-.btn-primary-green-index:hover .booking-icon svg path,
-.btn-primary-green-index:focus .booking-icon svg path {
+.btn-primary-blue-index:hover .booking-icon svg path,
+.btn-primary-blue-index:focus .booking-icon svg path {
     background-color: #ffffff;
     fill: #000000;
 }
@@ -995,6 +995,10 @@ header {
     line-height: 0.5;
 }
 
+.recurring-text {
+    text-align: center;
+}
+
 .recurring-container {
     display: flex;
     flex-direction: column;
@@ -1330,7 +1334,7 @@ header {
         .info-image img {
             width: 90%;
         }
-        .btn-primary-green-index {
+        .btn-primary-blue-index {
             max-width: none;
             width: auto;
             margin: 0;
@@ -1357,10 +1361,10 @@ header {
             gap: 1rem;
             width: 100%;
         }
-        .btn-primary-green-index {
+        .btn-primary-blue-index {
             width: 100%;
         }
-        .btn-primary-green-index {
+        .btn-primary-blue-index {
             width: 70%;
             margin: 0 auto;
         }
