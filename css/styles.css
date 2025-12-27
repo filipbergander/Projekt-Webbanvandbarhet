@@ -64,7 +64,7 @@ header {
     align-items: stretch;
 }
 
-.label {
+#navbar .label {
     font-size: 1.25rem;
 }
 
@@ -246,12 +246,11 @@ header {
 }
 
 .link:link {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .link:hover {
     color: #ff0000;
-    text-decoration: underline;
 }
 
 .link:active {
@@ -1158,6 +1157,10 @@ header {
     background-color: #ffffff;
     color: #000000;
     fill: #000000;
+}
+
+#navbar a .label {
+    color: #1a1a1a !important;
 }
 
 @media (max-width: 940px) {
