@@ -92,8 +92,8 @@
     <div class="sub-header">
         <nav aria-label="Navigering för brödsmulor">
             <ol class="breadcrumbs">
-                <li><a href="index.html" class="breadcrumb-item">Hem > </a></li>
-                <li><a href="mina-resor.html" class="breadcrumb-item">Mina resor > </a></li>
+                <li><a href="index.html" class="breadcrumb-item">Hem </a>></li>
+                <li><a href="mina-resor.html" class="breadcrumb-item">Mina resor </a>></li>
                 <li aria-current="page" class="breadcrumb-item">Ändra din resa</li>
             </ol>
         </nav>
@@ -116,35 +116,29 @@
                             <path
                                 d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
                         </svg>Ändra dina tillval</legend>
-
                     <div>
                         <input type="checkbox" name="trip" value="Rullstol" id="rullstol">
                         <label for="rullstol">Rullstol</label>
                     </div>
-
                     <div>
                         <input type="checkbox" name="trip" value="Medresenär" id="medresenar">
                         <label for="medresenar">Medresenär</label>
                     </div>
-
-                    <div>
+                    <div class="option-note">
                         <input type="checkbox" name="trip" value="Ledsagare" id="ledsagare">
                         <label for="ledsagare">Ledsagare</label>
                         <p class="note">(För ledsagare krävs tillstånd.)</p>
                     </div>
-
-                    <div>
+                    <div class="option-sms">
                         <input type="checkbox" name="trip" value="SMS-bekräftelse" id="sms">
                         <label for="sms">SMS-bekräftelse för resan</label>
                     </div>
-
                 </fieldset>
-
-                <div>
+                <div class="message-form">
                     <label for="message">Meddelande till chauffören:</label><br>
                     <textarea id="message" name="message" cols="50" rows="8" placeholder="Skriv ditt meddelande..."></textarea>
                 </div>
-                <button type="button" class="btn-primary-darkgreen" onclick="location.href='andra-resa.html'"><span>
+                <button type="button" class="btn-secondary-green" onclick="location.href='andra-resa.html'"><span>
                         Spara
                         ändringar
                     </span><span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"

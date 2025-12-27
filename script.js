@@ -82,12 +82,9 @@ function displayReturnTime() {
 }
 displayReturnTime();
 
-
-
 function recurringTravel() {
     const recurringBtn = document.querySelector(".recurring-btn");
     if (!recurringBtn) return;
-
 
     recurringBtn.addEventListener("click", () => {
         console.log("Klickat på knappen");
