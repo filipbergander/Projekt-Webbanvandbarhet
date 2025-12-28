@@ -67,15 +67,18 @@ function displayReturnTime() {
     const returnCheckbox = document.querySelectorAll("input[name='trip']");
     const returnRow = document.querySelector(".return-row");
     const returnText = document.querySelector(".return-time");
+    const returnSection = document.querySelector(".return-section");
 
     returnCheckbox.forEach(radio => {
         radio.addEventListener("change", () => {
             if (radio.value === "Tur och retur" && radio.checked) {
                 returnRow.classList.add("show");
                 returnText.classList.add("show");
+                returnSection.classList.add("show");
             } else {
                 returnRow.classList.remove("show");
                 returnText.classList.remove("show");
+                returnSection.classList.remove("show");
             }
         });
     });
@@ -87,7 +90,6 @@ function recurringTravel() {
     if (!recurringBtn) return;
 
     recurringBtn.addEventListener("click", () => {
-        console.log("Klickat på knappen");
         // Hämta radiobutton som är vald
         const selected = document.querySelector("input[name='recurring']:checked");
 

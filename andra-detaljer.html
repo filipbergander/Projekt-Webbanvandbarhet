@@ -114,94 +114,122 @@
                         d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
                 </svg>Ändra detaljer för din resa</h2>
             <form class="travel-form">
-                <fieldset class="form-group">
-                    <legend>
-                        Ändra din resa?
-                    </legend>
-                    <label class="trip-option"><input type="radio" required name="trip" value="Enkelresa"><svg
-                            xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#000000">
-                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                        </svg><span>Enkelresa</span></label>
-                    <label class="trip-option">
-                        <input type="radio" name="trip" value="Tur och retur" onclick="displayReturnTime()">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#000000">
-                            <path
-                                d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" />
-                        </svg>
-                        <span>Tur och retur</span>
-                    </label>
-                </fieldset>
-                <div class="inputs-adress">
-                    <label for="from-address">Från adress</label>
-                    <div class="input-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
-                            <path
-                                d="M516-120 402-402 120-516v-56l720-268-268 720h-56Zm26-148 162-436-436 162 196 78 78 196Zm-78-196Z" />
-                        </svg>
-                        <input id="from-address" type="text" name="from-address" autocomplete="section-from address-line1" placeholder="Skriv adress...">
-                    </div>
-                </div>
-                <div class="inputs-adress">
-                    <label for="to-address">Till adress</label>
-                    <div class="input-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px" viewBox="0 -960 960 960" width="30px" fill="#1f1f1f">
-                            <path
-                                d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
-                        </svg>
-                        <input id="to-address" type="text" name="to-address" autocomplete="section-to address-line1" placeholder="Skriv adress...">
-                    </div>
-                </div>
-                <div class="inputs-dates">
-                    <label for="date">Välj datum för resan</label>
-                    <div class="input-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
-                            <path
-                                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
-                        </svg> <input id="date" type="date" name="date">
-                    </div>
-                </div>
-                <div class="pickup">
-                    <p class="text-time"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
-                            <path
-                                d="M582-298 440-440v-200h80v167l118 118-56 57ZM440-720v-80h80v80h-80Zm280 280v-80h80v80h-80ZM440-160v-80h80v80h-80ZM160-440v-80h80v80h-80ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                        </svg>Vilken tid vill du bli upphämtad? </p>
-                    <div class="inputs-time">
-                        <p id="quick-time-label" class="quick-time-label">Snabbval av tid</p>
-                        <button type="button" class="quick-time" aria-labelledby="quick-time-label pickup-time" data-target="pickup-time" data-time="10:00">10:00</button>
-                    </div>
-                    <div class="inputs-time">
-                        <label for="pickup-time">Välj tid</label>
-                        <input id="pickup-time" type="time" name="pickup_time">
-                    </div>
-                </div>
-                <!-- <div class="inputs-adress">
-                    <label for="from-adress">Ange adress för returresan</label>
-                    <div class="input-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
-                            <path
-                                d="M516-120 402-402 120-516v-56l720-268-268 720h-56Zm26-148 162-436-436 162 196 78 78 196Zm-78-196Z" />
-                        </svg>
-                        <input id="from-adress" type="text" name="from-adress" autocomplete="address" placeholder="Skriv adress...">
-                    </div>
-                </div> -->
-                <div class="pickup">
-                    <p class="return-time">Vilken tid för din returresa?</p>
-                    <div class="return-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
-                            <path
-                                d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" />
-                        </svg>
-                        <div class="inputs-time">
-                            <p id="quick-return-label" class="quick-time-label">Snabbval av tid</p>
-                            <button type="button" class="quick-time" aria-labelledby="quick-return-label return-time" data-target="return-time" value="16:00" data-time="16:00">16:00</button>
-                        </div>
-                        <div class="inputs-time">
-                            <label for="return-time">Välj tid</label>
-                            <input id="return-time" type="time" name="return_time">
+                <section class="form-section">
+                    <h3><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px"
+                                viewBox="0 -960 960 960" width="30px" fill="#000000">
+                                <path
+                                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                            </svg></span>Ändra adresser</h3>
+                    <div class="inputs-adress">
+                        <label for="from-adress"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M360-440h80v-110h80v110h80v-190l-120-80-120 80v190Zm120 254q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                </svg></span>Från adress</label>
+                        <div class="input-field">
+                            <input id="from-adress" type="text" name="from-address" autocomplete="section-from address-line1" placeholder="Skriv adress...">
                         </div>
                     </div>
-                </div>
+                    <div class="inputs-adress">
+                        <label for="to-adress"><span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                    height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
+                                    <path
+                                        d="M200-80v-760h640l-80 200 80 200H280v360h-80Zm80-440h442l-48-120 48-120H280v240Zm0 0v-240 240Z" />
+                                </svg></span>Till adress</label>
+                        <div class="input-field">
+                            <input id="to-adress" type="text" name="to-address" autocomplete="section-to address-line1" placeholder="Skriv adress...">
+                        </div>
+                    </div>
+                </section>
+                <section class="form-section">
+                    <h3><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px"
+                                viewBox="0 -960 960 960" width="30px" fill="#000000">
+                                <path
+                                    d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                            </svg></span>Ändra datum</h3>
+                    <div class="inputs-dates">
+                        <label for="date">Vill du ändra datum för resan?</label>
+                        <div class="input-field">
+                            <input id="date" type="date" name="date">
+                        </div>
+                    </div>
+                </section>
+                <section class="form-section">
+                    <h3><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px"
+                                viewBox="0 -960 960 960" width="30px" fill="#000000">
+                                <path
+                                    d="M582-298 440-440v-200h80v167l118 118-56 57ZM440-720v-80h80v80h-80Zm280 280v-80h80v80h-80ZM440-160v-80h80v80h-80ZM160-440v-80h80v80h-80ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                            </svg></span>Ändra tid</h3>
+                    <div class="pickup">
+                        <p class="text-time"> Vill du ändra tid för upphämtning? </p>
+                        <div class="pickup-row">
+                            <div class="inputs-time">
+                                <p id="quick-time-label" class="quick-time-label">Snabbval av tid</p>
+                                <button type="button" class="quick-time" aria-labelledby="quick-time-label pickup-time" data-target="pickup-time" data-time="10:00">10:00</button>
+                            </div>
+                            <div class="inputs-time">
+                                <label for="pickup-time">Välj egen tid</label>
+                                <input id="pickup-time" type="time" name="pickup_time">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="form-section">
+                    <h3><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px"
+                                viewBox="0 -960 960 960" width="30px" fill="#000000">
+                                <path
+                                    d="M480-80q-15 0-29.5-6T424-104L104-424q-12-12-18-26.5T80-480q0-15 6-29.5t18-26.5l320-320q12-12 26.5-18t29.5-6q15 0 29.5 6t26.5 18l320 320q12 12 18 26.5t6 29.5q0 15-6 29.5T856-424L536-104q-12 12-26.5 18T480-80ZM320-320l160 160 320-320-320-320-320 320 160 160Zm160 40 200-200-200-200-56 56 102 104H280v80h246L424-336l56 56Zm0-200Z" />
+                            </svg></span>Ändra resa</h3>
+                    <fieldset class="form-group">
+                        <legend>
+                            Vill du ändra din resa?
+                        </legend>
+                        <label class="trip-option"><input type="radio" required name="trip" value="Enkelresa"><svg
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                            </svg><span>Enkelresa</span></label>
+                        <label class="trip-option">
+                            <input type="radio" name="trip" value="Tur och retur" onclick="displayReturnTime()">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" />
+                            </svg>
+                            <span>Tur och retur</span>
+                        </label>
+                    </fieldset>
+                </section>
+                <section class="return-section">
+                    <h3><span> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" />
+                            </svg></span>Ändra returresa</h3>
+                    <div class="pickup">
+                        <p class="return-time">Vill du ändra tid för din returresa?</p>
+                        <div class="return-row">
+                            <div class="inputs-time">
+                                <p id="quick-return-label" class="quick-time-label">Snabbval av tid</p>
+                                <button type="button" class="quick-time" aria-labelledby="quick-return-label return-time" data-target="return-time" value="16:00" data-time="16:00">16:00</button>
+                            </div>
+                            <div class="inputs-time">
+                                <label for="return-time">Välj egen tid</label>
+                                <input id="return-time" type="time" name="return_time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputs-adress">
+                        <label for="from-adress"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                    height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
+                                    <path
+                                        d="M360-440h80v-110h80v110h80v-190l-120-80-120 80v190Zm120 254q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                </svg></span>Vill du ändra upphämtningsadress för returresan?</label>
+                        <div class="input-field">
+                            <input id="from-adress" type="text" name="from-adress" autocomplete="address" placeholder="Skriv adress...">
+                        </div>
+                    </div>
+                </section>
                 <button type="button" class="recurring-btn-change" onclick="location.href='andra-resa.html'"><span>
                         Spara
                         ändringar
