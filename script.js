@@ -63,6 +63,7 @@ navigateLinks.forEach(link => { // Stänger sidomenyn när en länk i menyn klic
     });
 });
 
+// Visa returtid alternativet för både ändra resa och boka resa
 function displayReturnTime() {
     const returnCheckbox = document.querySelectorAll("input[name='trip']");
     const returnRow = document.querySelector(".return-row");
@@ -85,6 +86,8 @@ function displayReturnTime() {
 }
 displayReturnTime();
 
+
+// När användaren inte klickar i om resan ska vara återkommande eller inte
 function recurringTravel() {
     const recurringBtn = document.querySelector(".recurring-btn");
     if (!recurringBtn) return;
@@ -108,6 +111,7 @@ function recurringTravel() {
 }
 recurringTravel();
 
+// För att lägga till klassen show, css-regel, för att visa veckodagar i återkommande resor
 const weeklyTrip = document.getElementById("weekly-trip");
 const weekDays = document.querySelector(".weekdays");
 
@@ -121,54 +125,38 @@ if (weeklyTrip || weekDays) {
     })
 }
 
-document.getElementById("reset-btn").addEventListener("click", () => {
-    const msgArea = document.getElementById("message");
-    msgArea.value = '';
-    msgArea.focus();
+// Nollställa meddelande i tillgänglighetsformulär
+const resetMsg = document.getElementById("reset-btn")
+if (resetMsg) {
+    resetMsg.addEventListener("click", () => {
+        const msgArea = document.getElementById("message");
+        msgArea.value = '';
+        msgArea.focus();
+    });
+}
+
+
+// För vanlig tid i boka resa och ändra resa
+document.querySelectorAll(".return-row .quick-time").forEach(button => {
+    button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        const timeValue = button.getAttribute("data-time");
+        const timeInput = document.getElementById(targetId);
+        if (timeInput) {
+            timeInput.value = timeValue;
+        }
+    });
 });
 
 
-
-
-
-
-
-/* const selected = document.querySelector("input[name='recurring']:checked");
-
-        if (!selected) {
-            alert("Vänligen välj ett alternativ för återkommande resa.");
-            return;
-        }
-
-        if (selected.value === "Ja") {
-            window.location.href = "boka-kommande.html";
-        } else {
-            window.location.href = "boka-tillval.html";
+// För returtid i boka resa och ändra resa
+document.querySelectorAll(".pickup-row .quick-time").forEach(button => {
+    button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        const timeValue = button.getAttribute("data-time");
+        const timeInput = document.getElementById(targetId);
+        if (timeInput) {
+            timeInput.value = timeValue;
         }
     });
-}*/
-
-
-
-/*
-const timeButtons = document.querySelectorAll(".quick-time");
-
-timeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        openButton.classList.toggle("selected");
-        timeButtons.value = returnTime.innerHTML;
-        const targetInputId = button.dataset.target; 
-        const input = document.getElementById(targetInputId);
-        input.value = button.dataset.time; 
-    });
-});
-
-/*
-        const pickupTime = document.getElementById("pickup-time");
-        const timeBtns = document.querySelectorAll(".quicktime");
-
-        timeBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                pickupTime.value = btn.dataset.time;
-            });
-        }); */
+})
