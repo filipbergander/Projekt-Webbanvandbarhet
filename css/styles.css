@@ -711,7 +711,11 @@
     .btn-primary-blue-index:hover .booking-icon svg path,
     .btn-primary-blue-index:focus .booking-icon svg path,
     .exit-button:hover svg path,
-    .exit-button:focus svg path {
+    .exit-button:focus svg path,
+    .btn-secondary-blue:hover .btn-icon,
+    .btn-secondary-blue:focus .btn-icon,
+    #reset-btn:hover .btn-icon,
+    #reset-btn:focus .btn-icon {
         background-color: #ffffff;
         fill: #000000;
     }
@@ -770,11 +774,11 @@
     }
     
     .usability-content h2 {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 75%;
+        width: 95%;
     }
     
     .travel-form fieldset,
@@ -788,6 +792,8 @@
     
     .usability-fieldset .btn-secondary-darkgreen {
         margin: 0 auto;
+        display: flex;
+        align-items: center;
     }
     
     .usability-fieldset input[type="radio"] {
@@ -812,6 +818,13 @@
     
     .contact-group p {
         margin: 0 auto;
+    }
+    
+    .contact-group legend {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0;
     }
     
     .usability-name,
@@ -869,10 +882,12 @@
         border-radius: 6px;
         cursor: pointer;
         margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
     }
     
     .usability-description {
-        margin-top: 3rem;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -888,6 +903,7 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         padding-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     
     .usability-description h2 {
@@ -1574,6 +1590,9 @@
             }
             .btn-secondary-green {
                 margin-bottom: 2rem;
+            }
+            .usability-content h2 {
+                width: 80%;
             }
         }
         @media screen and (max-width: 400px) {

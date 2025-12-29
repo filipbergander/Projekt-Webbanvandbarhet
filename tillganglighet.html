@@ -105,45 +105,18 @@
     </div>
     <main class="main-content">
         <h1>Tillgänglighet</h1>
-        <section class="usability-content">
-            <h2>Tillgänglighetsbrist och problem på webbplatsen</h2>
-            <form class="usability-form">
-                <fieldset class="usability-fieldset">
-                    <legend>Beskriv hur och vart webbplatsen brister i sin tillgänglighet.</legend>
-                    <div>
-                        <label class="usability-message" for="message">Meddelande:</label>
-                        <textarea id="message" name="message" cols="50" rows="8" placeholder="Skriv ditt meddelande..."></textarea>
-                        <button type="button" id="reset-btn">Rensa meddelandet</button>
-                    </div>
-                    <fieldset class="contact-group">
-                        <legend>Vill du bli kontaktad?</legend>
-                        <div class="radio-contact">
-                            <label><input type="radio" name="recurring" value="Nej">Nej</label>
-                            <label><input type="radio" name="recurring" value="Ja">Ja</label>
-                        </div>
-                    </fieldset>
-                    <div class="usability-name">
-                        <label for="name">Ditt namn</label>
-                        <input type="text" id="name" name="name" placeholder="Skriv ditt namn...">
-                    </div>
-                    <div class="usability-email">
-                        <label for="email">Din e-postadress</label>
-                        <input type="email" id="email" name="email" placeholder="Skriv din e-postadress...">
-                    </div>
-                    <button type="submit" class="btn-secondary-darkgreen">Skicka in anmälan</button>
-                </fieldset>
-            </form>
-        </section>
         <article class="usability-description">
             <h2>Tillgänglighetsredogörelse</h2>
             <h3>Tillgänglighet för Färdtjänst inom Sundsvall</h3>
-            <p>Färdtjänst i Sundsvall står bakom den här webbplatsen. Vi vill att så många som möjligt ska kunna använda den och strävar efter att följa WCAG 2.1 nivå AA. Det här dokumentet beskriver hur Färdtjänst i Sundsvall uppfyller lagen om tillgänglighet
-                till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem.</p>
+            <p>Färdtjänst i Sundsvall står bakom den här webbplatsen. Webbplatsen riktar sig till besökare av alla åldrar och digitala vanor. Tjänsten används främst av personer med funktionsnedsättningar för att kunna boka färdtjänstresor. Därför kräver
+                hemsidan och tjänsten en tydlig och enkel navigering.</p>
+            <p>Vi vill att så många som möjligt ska kunna använda den och strävar efter att följa WCAG 2.1 nivå AA. Det här dokumentet beskriver hur Färdtjänst i Sundsvall uppfyller lagen om tillgänglighet till digital offentlig service, eventuella kända
+                tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem.</p>
             <h3>Hur tillgänglig är webbplatsen?</h3>
             <p>Vi är medvetna om att delar av webbplatsen inte är helt tillgängliga. Se avsnittet om innehåll som inte är tillgängligt nedan för mer information</p>
             <h3>Vad kan du göra om du inte kan använda delar av webbplatsen?</h3>
-            <p>Om du behöver innehåll från Färdtjänst i Sundsvall som inte är tillgängligt för dig, men som är undantaget från lagens tillämpningsområde enligt beskrivning nedan, kan du meddela oss. Svarstiden är normalt två arbetsdagar. Du kan också kontakta
-                oss på följande sätt:</p>
+            <p>Om du behöver innehåll från Färdtjänst i Sundsvall som inte är tillgängligt för dig, men som är undantaget från lagens tillämpningsområde enligt beskrivning nedan, kan du meddela oss genom formuläret under redogörelsen. Svarstiden är normalt
+                två arbetsdagar. Du kan också kontakta oss på följande sätt:</p>
             <ul>
                 <li>Skicka e-post till <a class="link" target="_blank" href="mailto:färdtjänstsvl@info.se">färdtjänstsvl@info.se</a>
                 </li>
@@ -160,18 +133,69 @@
             <h3>Teknisk information om webbplatsens tillgänglighet</h3>
             <p>Den här webbplatsen är delvis förenlig med lagen om tillgänglighet till digital offentlig service, på grund av de brister som beskrivs nedan</p>
             <h3>Innehåll som inte är tillgängligt</h3>
-            <p>Det innehåll som beskrivs nedan är på ett eller annat sätt inte helt tillgängligt. Kontrast och färg:</p>
+            <p>Det innehåll som beskrivs nedan är på ett eller annat sätt inte helt tillgängligt:</p>
+            <p>På webbplatsen visas en popup-ruta om användaren försöker gå vidare i bokningen av resa utan att markera om resan är återkommande eller inte. Denna popup kan leda till ett störande moment för besökarna.</p>
             <ul>
-                <li>Vår målsättning är att uppfylla WCAG 2.1 nivå AA för krav på kontrast. Men det kan förekomma texter, knappar och ikoner som ännu inte uppfyller alla krav.</li>
+                <li>Användare som är äldre eller med kognitiva svårigheter kan ha svårt att förstå vad som händer och hur man går tillbaka eller vidare i bokningen</li>
+                <li>Personer som navigerar genom tangentbordet får inte automatiskt fokus på popup-rutan</li>
+                <li>Besökare som använder skärmläsare kan ha svårt att förstå att popup-rutan öppnats</li>
             </ul>
+            <p>Detta innebär att denna alertfunktion, popup-ruta, inte fullt ut uppfyller kraven för tillgänglighet hos WCAG 2.1. Främst genom kriterierna, 2.4.3 Fokusordning, 3.3.2 Etiketter eller instruktioner samt 4.1.2 Namn, roll och värde. </p>
+            <p> Vi planerar att åtgärda denna brist under 2026 genom att införa en korrekt ARIA-roll, fokusstyrning och tydligare instruktioner för användarna.</p>
             <h3>Hur vi testat webbplatsen</h3>
-            <p>Vi har gjort en självskattning (intern testning) av webbplatsen, Färdtjänst i Sundsvall.</p>
-            <p>Studenter på Mittuniversitetet i Sundsvall har gjort en oberoende granskning av webbplatsen.</p>
-            <p>Senaste bedömningen gjordes den 26-12-2025. Granskningsmetod Granskningsrapport
+            <p>Vi har gjort en självskattning (intern testning) samt använt oss av användartester av webbplatsen, Färdtjänst i Sundsvall. Den interna testningen utfördes med hjälp av testverktygen, WAVE, axe Devtools och PageSpeed Insights. HTML och CSS
+                validerades med W3C:s valideringsverktyg.</p>
+            <p>Användartesterna utfördes av verkliga besökare till webbplatsen. De hade varierade digitala kunskaper och vanor. Testpersonerna var både äldre och yngre. Testerna genomfördes på desktop med större skärm, surfplattor och mobila enheter.</p>
+            <p>Studenter på Mittuniversitetet i Sundsvall har även gjort en oberoende granskning av webbplatsen.</p>
+            <p>Senaste bedömningen gjordes den 29-12-2025.
             </p>
             <p>Webbplatsen publicerades 26-12-2025.</p>
-            <p>Redogörelsen uppdaterades senast den 26-12-2025.</p>
+            <p>Redogörelsen uppdaterades senast den 29-12-2025.</p>
         </article>
+        <section class="usability-content">
+            <h2>Tillgänglighetsbrist och problem på webbplatsen</h2>
+            <form class="usability-form">
+                <fieldset class="usability-fieldset">
+                    <legend>Beskriv hur och vart webbplatsen brister i sin tillgänglighet.</legend>
+                    <div>
+                        <label class="usability-message" for="message">Meddelande:</label>
+                        <textarea id="message" name="message" cols="50" rows="8" placeholder="Skriv ditt meddelande..."></textarea>
+                        <button type="button" id="reset-btn">Rensa meddelandet<span><svg
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" class="btn-icon" fill="#000000">
+                                    <path
+                                        d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                                </svg></span></button>
+                    </div>
+                    <fieldset class="contact-group">
+                        <legend><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M560-520h280v-200H560v200Zm140-50-100-70v-40l100 70 100-70v40l-100 70ZM80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM360-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM182-200h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm178-280q-17 0-28.5-11.5T320-520q0-17 11.5-28.5T360-560q17 0 28.5 11.5T400-520q0 17-11.5 28.5T360-480Zm120 0Z" />
+                                </svg></span>Vill du bli kontaktad?</legend>
+                        <div class="radio-contact">
+                            <label><input type="radio" name="recurring" value="Nej">Nej</label>
+                            <label><input type="radio" name="recurring" value="Ja">Ja</label>
+                        </div>
+                    </fieldset>
+                    <div class="usability-name">
+                        <label for="name">Ditt namn</label>
+                        <input type="text" id="name" name="name" placeholder="Skriv ditt namn...">
+                    </div>
+                    <div class="usability-email">
+                        <label for="email">Din e-postadress</label>
+                        <input type="email" id="email" name="email" placeholder="Skriv din e-postadress...">
+                    </div>
+                    <button type="submit" class="btn-secondary-darkgreen">Skicka in anmälan<span><svg
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#fff" class="btn-icon">
+                                <path
+                                    d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                            </svg></span></button>
+                </fieldset>
+            </form>
+        </section>
+
     </main>
     <footer>
         <nav class="footer-area">
