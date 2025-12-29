@@ -228,9 +228,15 @@
     }
     
     .questions ul,
-    .digital-booking ul {
+    .digital-booking ul,
+    .who-can ul,
+    .what-is ul {
         margin-left: 2rem;
         line-height: 1.6;
+    }
+    
+    .info-section li {
+        display: list-item;
     }
     
     .info-section h2 {
@@ -295,25 +301,19 @@
         background-color: #E5D0AC;
         border-radius: 8px;
         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.20);
-        padding: 1.5rem;
+        padding-left: 1.5rem;
         max-width: 55ch;
-        width: 70%;
+        width: 100%;
+        margin-left: 2rem;
     }
     
     .what-is ul,
     .who-can ul {
         margin: 0;
-        padding: 0.25rem;
+        padding-left: 1.5rem;
         margin-right: auto;
-        line-height: 1.6;
         margin-bottom: 0.5rem;
-    }
-    
-    .what-is ul,
-    .who-can ul {
-        list-style-position: inside;
-        margin-left: 0.5rem;
-        padding: 0;
+        margin-top: 0.5rem;
     }
     
     .about-content {
@@ -405,6 +405,13 @@
     
     .travel-container h2 {
         margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .travel-container h3 {
+        display: flex;
+        align-items: center;
     }
     
     .coming-container h2 {
@@ -449,7 +456,6 @@
     
     .coming-container ul {
         padding-left: 0;
-        list-style-position: inside;
         width: 300px;
     }
     
@@ -608,6 +614,7 @@
     
     .btn-secondary-red {
         background-color: #A83D3D;
+        padding-left: 1rem;
     }
     
     .btn-secondary-darkgreen {
@@ -700,7 +707,9 @@
     .recurring-btn-change:hover .btn-icon,
     .recurring-btn-change:focus .btn-icon,
     .btn-primary-blue-index:hover .booking-icon svg path,
-    .btn-primary-blue-index:focus .booking-icon svg path {
+    .btn-primary-blue-index:focus .booking-icon svg path,
+    .exit-button:hover svg path,
+    .exit-button:focus svg path {
         background-color: #ffffff;
         fill: #000000;
     }
@@ -736,7 +745,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        ;
         gap: 0.3rem;
         padding: 1rem;
         border: none;
@@ -833,7 +841,7 @@
         padding: 10px;
         border-radius: 6px;
         font-size: 1.125rem;
-        width: 90%;
+        width: 95%;
         resize: vertical;
     }
     
@@ -949,15 +957,21 @@
         gap: 0.5rem;
     }
     
-    .inputs-adress {
+    .inputs-address {
         display: flex;
         flex-direction: column;
         margin-bottom: 1rem;
         width: 80%;
     }
     
-    .inputs-adress input[type="text"] {
+    .inputs-address input[type="text"] {
         font-size: 1.125rem;
+    }
+    
+    .inputs-address label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
     }
     
     .input-field input[type="text"] {
@@ -996,12 +1010,13 @@
         width: 100%;
     }
     
-    .form-section {
+    .form-section,
+    .change-section {
         display: flex;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.548);
+        background-color: #f8c163;
         border-radius: 10px;
         gap: 1rem;
         margin-bottom: 2rem;
@@ -1009,7 +1024,12 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
     
-    .book-container h3 {
+    .change-section {
+        background-color: #dad7d7;
+    }
+    
+    .book-container h3,
+    .form-container h3 {
         display: flex;
         align-items: center;
     }
@@ -1053,7 +1073,7 @@
         height: 100%;
     }
     
-    .inputs-adress,
+    .inputs-address,
     .inputs-dates,
     .times-row,
     .return-row,
@@ -1067,7 +1087,7 @@
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.548);
+        background-color: #dad7d7;
         border-radius: 10px;
         gap: 1rem;
         margin-bottom: 2rem;
@@ -1099,8 +1119,8 @@
     
     .inputs-time input[type="time"],
     .quick-time {
-        padding: 0.8rem 1rem;
-        font-size: 1.125rem;
+        padding: 1rem;
+        font-size: 1rem;
         box-sizing: border-box;
         min-width: 0;
     }
@@ -1170,7 +1190,7 @@
     .exit-button {
         display: flex;
         align-items: center;
-        padding: 0.3rem;
+        padding: 0.5rem;
         justify-content: left;
         margin-right: auto;
         margin-top: auto;
@@ -1184,6 +1204,10 @@
     .exit-button {
         margin: 0 auto;
         margin-top: 2rem;
+        background-color: #006CFF;
+        color: #ffffff;
+        font-weight: 1.125rem;
+        border-radius: 8px;
     }
     
     .weekly-container {
@@ -1279,16 +1303,21 @@
         }
         #open-sidebarbutton {
             position: sticky;
-            display: block;
+            display: flex;
+            flex-direction: column;
             margin-left: auto;
             border: none;
             cursor: pointer;
             padding: 0.5rem;
             background: none;
             z-index: 10;
+            font-size: 1.125rem;
         }
         #close-sidebarbutton {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
             position: absolute;
             background: none;
             border: none;
@@ -1297,6 +1326,8 @@
             cursor: pointer;
             padding: 0.5rem;
             z-index: 25;
+            font-size: 1.125rem;
+            color: #ffffff;
         }
         #navbar {
             position: fixed;
@@ -1331,7 +1362,7 @@
             margin: 0;
             padding: 3rem 0 0 0;
             flex: none;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
         #navbar li {
             width: 100%;
@@ -1489,18 +1520,31 @@
             }
             .what-is,
             .who-can {
-                width: 80%;
+                width: auto;
                 margin: 0 auto;
+                list-style-position: outside;
             }
             .info-container {
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-areas: "info-image" "digital-booking" "questions";
-                justify-items: center;
+                justify-items: stretch;
+                margin: 0 auto;
+            }
+            .info-section {
+                margin: 0 auto;
+            }
+            .info-container>section,
+            .info-container>figure {
+                width: 100%;
+                max-width: 55ch;
+                margin: 0 auto;
             }
             .questions {
                 justify-self: center;
                 grid-area: questions;
+                width: 100%;
+                max-width: 55ch;
             }
             .info-image {
                 justify-self: center;
@@ -1515,8 +1559,9 @@
                 margin: 0;
             }
             .digital-booking {
-                justify-self: center;
                 grid-area: digital-booking;
+                width: 100%;
+                max-width: 55ch;
             }
             .button-area,
             .button-area-change-trip {
@@ -1549,7 +1594,7 @@
                 flex-wrap: wrap;
                 gap: 0.5rem;
             }
-            .input-adress input[type="text"] {
+            .input-address input[type="text"] {
                 min-width: 100%;
                 flex-wrap: wrap;
             }
@@ -1571,13 +1616,14 @@
             .usability-email input[type="email"] {
                 width: 100%;
             }
-            .footer-area {
-                padding: 3rem 0;
-                height: 5%;
+            .travel-form {
+                width: 90%;
+                margin-left: 0;
             }
-            .footer-area ul {
-                gap: 2rem;
-                display: flex;
+            .footer-area {
+                padding: 1rem 0;
+                height: auto;
+                align-items: stretch;
                 flex-direction: column;
             }
             .login-form {
@@ -1587,8 +1633,18 @@
                 width: 90%;
             }
             .form-section,
-            .return-section.show {
+            .return-section.show,
+            .change-section {
                 width: 95%;
+            }
+            .footer-area ul {
+                gap: 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+            .btn-secondary-red {
+                padding: 0.8rem 1.2rem;
+                text-align: center;
             }
         }
         @media screen and (max-width: 320px) {
