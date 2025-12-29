@@ -139,7 +139,7 @@ if (resetMsgBtn) {
 }
 
 
-// För vanlig tid i boka resa och ändra resa
+// För att fylla i vanlig tid i boka resa och ändra resa genom snabbval
 document.querySelectorAll(".return-row .quick-time").forEach(button => {
     button.addEventListener("click", () => {
         const targetId = button.getAttribute("data-target");
@@ -152,7 +152,7 @@ document.querySelectorAll(".return-row .quick-time").forEach(button => {
 });
 
 
-// För returtid i boka resa och ändra resa
+// För att fylla i returtid i boka resa och ändra resa genom snabbval
 document.querySelectorAll(".pickup-row .quick-time").forEach(button => {
     button.addEventListener("click", () => {
         const targetId = button.getAttribute("data-target");
