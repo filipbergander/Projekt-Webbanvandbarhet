@@ -845,6 +845,11 @@
         resize: vertical;
     }
     
+    .book-container #message,
+    .message-form #message {
+        width: 100%;
+    }
+    
     .usability-name input[type="text"],
     .usability-email input[type="email"] {
         font-size: 1.125rem;
@@ -1433,11 +1438,11 @@
         .questions {
             justify-self: center;
             grid-area: questions;
+            width: auto;
         }
         .info-image {
             justify-self: center;
             grid-area: info-image;
-            width: auto;
         }
         .digital-booking {
             justify-self: center;
@@ -1528,11 +1533,12 @@
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-areas: "info-image" "digital-booking" "questions";
-                justify-items: stretch;
+                justify-items: center;
                 margin: 0 auto;
             }
             .info-section {
                 margin: 0 auto;
+                max-width: 55ch;
             }
             .info-container>section,
             .info-container>figure {
@@ -1543,8 +1549,6 @@
             .questions {
                 justify-self: center;
                 grid-area: questions;
-                width: 100%;
-                max-width: 55ch;
             }
             .info-image {
                 justify-self: center;
@@ -1560,8 +1564,6 @@
             }
             .digital-booking {
                 grid-area: digital-booking;
-                width: 100%;
-                max-width: 55ch;
             }
             .button-area,
             .button-area-change-trip {
