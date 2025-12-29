@@ -508,7 +508,7 @@
     .login-form input[type="text"],
     .login-form input[type="password"] {
         padding: 0.5rem;
-        font-size: 1rem;
+        font-size: 1.125rem;
         border-radius: 6px;
         border: 1px solid #ccc;
         margin-bottom: 3rem;
@@ -546,7 +546,6 @@
     .btn-primary-darkgreen {
         display: flex;
         align-items: center;
-        font-size: 1.125rem;
         font-weight: 600;
         line-height: normal;
         font-style: normal;
@@ -1128,7 +1127,7 @@
     .inputs-time input[type="time"],
     .quick-time {
         padding: 1rem;
-        font-size: 1rem;
+        font-size: 1.125rem;
         box-sizing: border-box;
         min-width: 0;
     }
@@ -1188,7 +1187,7 @@
     .travel-form textarea {
         width: 100%;
         padding: 0.5rem;
-        font-size: 1rem;
+        font-size: 1.125rem;
         border-radius: 5px;
         border: 1px solid #ccc;
         box-sizing: border-box;
