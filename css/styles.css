@@ -305,6 +305,8 @@
         max-width: 55ch;
         width: 100%;
         margin-left: 2rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
     
     .what-is ul,
@@ -1609,10 +1611,6 @@
             }
             .note {
                 line-height: 1.2rem;
-            }
-            .usability-fieldset .btn-secondary-darkgreen {
-                white-space: wrap;
-                padding: 0.5rem 0 0.5rem 0;
             }
             .usability-name input[type="text"],
             .usability-email input[type="email"] {

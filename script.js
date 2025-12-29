@@ -126,12 +126,15 @@ if (weeklyTrip || weekDays) {
 }
 
 // Nollställa meddelande i tillgänglighetsformulär
-const resetMsg = document.getElementById("reset-btn")
-if (resetMsg) {
-    resetMsg.addEventListener("click", () => {
+const resetMsgBtn = document.getElementById("reset-btn")
+if (resetMsgBtn) {
+    resetMsgBtn.addEventListener("click", () => {
         const msgArea = document.getElementById("message");
-        msgArea.value = '';
-        msgArea.focus();
+        if (msgArea) {
+            msgArea.value = '';
+            msgArea.focus();
+        }
+        resetMsgBtn.blur();
     });
 }
 
