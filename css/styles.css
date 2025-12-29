@@ -1618,6 +1618,9 @@
             .usability-email input[type="email"] {
                 width: 100%;
             }
+            .usability-form {
+                width: 90%;
+            }
             .travel-form {
                 width: 90%;
                 margin-left: 0;
