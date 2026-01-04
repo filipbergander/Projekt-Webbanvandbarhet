@@ -565,6 +565,11 @@
         white-space: nowrap;
     }
     
+    .btn-primary {
+        width: 20%;
+        justify-content: center;
+    }
+    
     .btn-secondary-green,
     .btn-secondary-blue,
     .btn-secondary-red,
@@ -626,7 +631,7 @@
     
     .btn-secondary-blue,
     .login-form .btn-secondary-green {
-        width: 60%;
+        width: 90%;
     }
     
     .btn-primary-darkgreen {
@@ -641,6 +646,7 @@
         margin: 0 auto;
         margin-top: 2rem;
         display: flex;
+        width: 80%;
     }
     
     .recurring-btn,
@@ -648,6 +654,7 @@
         background-color: #077320;
         margin: 0 auto;
         margin-bottom: 2rem;
+        width: 80%;
     }
     
     .btn-secondary-grey {
@@ -1090,11 +1097,12 @@
     
     .travel-form {
         margin: 0 auto;
-        max-width: 500px;
+        max-width: 600px;
         min-width: 0;
         min-height: 300px;
         width: 75%;
         height: 100%;
+        align-items: center;
     }
     
     .inputs-address,
@@ -1232,6 +1240,10 @@
         color: #ffffff;
         font-size: 1.125rem;
         border-radius: 8px;
+        min-width: 150px;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
     }
     
     .weekly-container {
