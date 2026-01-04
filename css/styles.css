@@ -741,17 +741,23 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        margin-top: 2rem;
-        line-height: 1.6;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
         background-color: white;
         width: 50%;
         max-width: 500px;
         padding: 2rem;
+        padding-top: 0.5rem;
         box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.20);
     }
     
+    .integrity-policy ul {
+        margin-left: 2rem;
+    }
+    
     .integrity-policy h2 {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
     
     .travel-form,
@@ -815,6 +821,10 @@
         padding-top: 0.5rem;
         padding-bottom: 1rem;
         margin: 0 auto;
+    }
+    
+    .ingress {
+        font-weight: bold;
     }
     
     .contact-group {
@@ -907,7 +917,7 @@
         background-color: #ffffff;
         box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.20);
         gap: 0.5rem;
-        line-height: 1.55;
+        line-height: 1.5;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         padding-bottom: 1.5rem;
@@ -916,14 +926,15 @@
     
     .usability-description h2 {
         margin-top: 1rem;
-        overflow-wrap: break-word;
-    }
-    
-    .usability-description h3 {
-        margin-top: 1rem;
         margin-right: auto;
         margin-bottom: 0rem;
         line-height: 1.2;
+    }
+    
+    .usability-description h3 {
+        margin-top: 0.5rem;
+        margin-right: auto;
+        margin-bottom: 0rem;
     }
     
     .usability-description ul {
@@ -934,6 +945,11 @@
     
     .usability-description p {
         margin-right: auto;
+    }
+    
+    .address-usability {
+        margin-right: auto;
+        font-style: normal;
     }
     
     .radio-contact {
@@ -1684,6 +1700,9 @@
             }
             .btn-secondary-red {
                 padding: 0.8rem 1.2rem;
+                text-align: center;
+            }
+            .usability-h1 {
                 text-align: center;
             }
         }
