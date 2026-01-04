@@ -226,6 +226,7 @@
         width: 100%;
         max-width: 400px;
         justify-content: center;
+        font-style: normal;
     }
     
     .questions ul,
@@ -1533,11 +1534,14 @@
         .btn-secondary-red {
             width: 50%;
         }
+        .information-container {
+            gap: 2rem;
+        }
         @media screen and (max-width: 768px) {
             .information-container {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
+                gap: 2rem;
                 align-items: center;
                 margin: 0;
             }
@@ -1560,13 +1564,13 @@
             }
             .info-container>section,
             .info-container>figure {
-                width: 100%;
                 max-width: 55ch;
                 margin: 0 auto;
             }
             .questions {
                 justify-self: center;
                 grid-area: questions;
+                width: auto;
             }
             .info-image {
                 justify-self: center;
@@ -1582,6 +1586,8 @@
             }
             .digital-booking {
                 grid-area: digital-booking;
+                justify-self: center;
+                width: auto;
             }
             .button-area,
             .button-area-change-trip {
