@@ -1339,7 +1339,7 @@
     }
     
     #navbar a .label {
-        color: #1a1a1a;
+        color: #000000;
     }
     
     @media (max-width: 940px) {
