@@ -519,7 +519,6 @@
         margin-bottom: 0;
     }
     
-    .login-form button,
     .login-form h2 {
         margin: 0 auto;
         padding: 1rem;
@@ -527,6 +526,7 @@
     
     .login-form h2 {
         width: 100%;
+        text-align: center;
     }
     
     #open-sidebarbutton,
@@ -563,11 +563,13 @@
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         letter-spacing: 1px;
         white-space: nowrap;
+        text-decoration: none;
     }
     
     .btn-primary {
         width: 20%;
         justify-content: center;
+        min-width: 250px;
     }
     
     .btn-secondary-green,
@@ -594,6 +596,7 @@
         border: 1px solid #000;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         white-space: nowrap;
+        text-decoration: none;
     }
     
     .btn-primary-blue-index {
@@ -606,13 +609,14 @@
         line-height: normal;
         font-weight: 600;
         margin-top: 1rem;
-        padding: 0.75rem 1.5rem;
+        padding: 0.75rem 0.5rem;
         background-color: #0752BB;
         color: #ffffff;
         cursor: pointer;
         border-radius: 12px;
         border: 1px solid #000;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        text-decoration: none;
     }
     
     .btn-primary-blue-index svg {
@@ -646,7 +650,8 @@
         margin: 0 auto;
         margin-top: 2rem;
         display: flex;
-        width: 80%;
+        width: 70%;
+        margin-bottom: 1rem;
     }
     
     .recurring-btn,
@@ -659,6 +664,7 @@
     
     .btn-secondary-grey {
         background-color: #5E6B78;
+        padding-left: 1rem;
     }
     
     .btn-primary-blue-index:hover,
@@ -1247,6 +1253,7 @@
         background-color: rgb(255, 255, 255);
         margin-top: auto;
         cursor: pointer;
+        text-decoration: none;
     }
     
     .exit-button {
@@ -1260,6 +1267,7 @@
         width: 40%;
         align-items: center;
         justify-content: center;
+        border: 1px solid #000;
     }
     
     .weekly-container {
@@ -1565,6 +1573,9 @@
         .information-container {
             gap: 2rem;
         }
+        .exit-button {
+            width: 60%;
+        }
         @media screen and (max-width: 768px) {
             .information-container {
                 display: flex;
@@ -1622,9 +1633,6 @@
                 gap: 1rem;
                 justify-content: center;
             }
-            .btn-secondary-green {
-                margin-bottom: 2rem;
-            }
             .usability-content h2 {
                 width: 80%;
             }
@@ -1637,7 +1645,7 @@
                 min-width: 0;
                 padding-right: 1rem;
             }
-            .button-area-change-trip button {
+            .button-area-change-trip a {
                 max-width: 175px;
                 width: auto;
                 box-sizing: border-box;
@@ -1646,6 +1654,18 @@
             }
             .button-area-change-trip .btn-secondary-darkgreen {
                 padding-right: 1rem;
+            }
+            .button-area .btn-secondary-darkgreen,
+            .button-area .btn-secondary-red {
+                max-width: 145px;
+                width: auto;
+                box-sizing: border-box;
+                min-width: 0;
+                padding-right: 1rem;
+            }
+            .button-area {
+                flex-wrap: wrap;
+                gap: 0.5rem;
             }
             .button-area-change-trip {
                 flex-wrap: wrap;
@@ -1661,6 +1681,9 @@
             .btn-primary-blue-index {
                 width: 70%;
                 margin: 0 auto;
+            }
+            .btn-primary {
+                min-width: 175px;
             }
             .note {
                 line-height: 1.2rem;
@@ -1704,6 +1727,10 @@
             }
             .usability-h1 {
                 text-align: center;
+            }
+            .coming-container h2 {
+                width: 90%;
+                align-items: center;
             }
         }
         @media screen and (max-width: 320px) {

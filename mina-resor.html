@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="/bilder/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/bilder/favicon.svg" />
+    <link rel="shortcut icon" href="/bilder/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/bilder/apple-touch-icon.png" />
+    <link rel="manifest" href="/bilder/site.webmanifest" />
 </head>
 
 <body>
@@ -37,7 +42,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="logga-in.html" aria-current="page" class="nav-link">
+                    <a href="mina-resor.html" aria-current="page" class="nav-link">
                         <span class="icon" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon" height="30px"
                                 viewBox="0 -960 960 960" width="30px" fill="#000000">
@@ -107,12 +112,12 @@
         <h1>
             Mina resor
         </h1>
-        <button class="btn-primary" type="button" onclick="location.href='boka-enkel.html'">
+        <a href="boka-enkel.html" class="btn-primary">
             <span><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" height="30px" viewBox="0 -960 960 960"
                     width="30px">
                     <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
                 </svg></span>
-            <span>Boka ny resa</span></button>
+            <span>Boka ny resa</span></a>
         <section class="coming-container">
             <h2><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="30px" viewBox="0 -960 960 960"
                         width="30px" fill="#000000">
@@ -133,22 +138,23 @@
                 <li>Meddelande: Jag behöver hjälp ut, det är halt.</li>
             </ul>
             <div class="button-area">
-                <button type="button" class="btn-secondary-red" onclick="location.href='avbokad-resa.html'"><span>
+                <a href="avbokad-resa.html" class="btn-secondary-red"><span>
                         Avboka resa
-                    </span><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px" viewBox="0 -960 960 960"
-                            width="24px" class="btn-icon" fill="#000000">
+                    </span><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                            viewBox="0 -960 960 960" width="24px" class="btn-icon" fill="#000000">
                             <path
                                 d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
                         </svg></span>
-                </button>
-                <button type="button" class="btn-secondary-darkgreen" onclick="location.href='andra-resa.html'"><span>
+                </a>
+                <a href="andra-resa.html" class="btn-secondary-darkgreen"><span>
                         Ändra
                         resa
-                    </span><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px" class="btn-icon"
-                            viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    </span><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" height="24px"
+                            class="btn-icon" viewBox="0 -960 960 960" width="24px" fill="#fff">
                             <path
                                 d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
-                        </svg></span></button>
+                        </svg></span>
+                </a>
             </div>
         </section>
     </main>
