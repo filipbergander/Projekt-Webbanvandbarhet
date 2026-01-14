@@ -207,6 +207,11 @@
     .info-content h1 {
         margin-bottom: 0.5rem;
     }
+    /* Blev för skrikigt med för mycket fetstil på startsidan*/
+    
+    .info-content h2 {
+        font-weight: 400;
+    }
     
     .info-container {
         display: flex;
