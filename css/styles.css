@@ -1305,6 +1305,7 @@
         aspect-ratio: 3 / 2;
         margin: 0 auto;
         margin-bottom: 0.5rem;
+        border-radius: 8px;
     }
     
     .footer-area {
