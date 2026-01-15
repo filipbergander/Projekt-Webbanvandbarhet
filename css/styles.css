@@ -8,6 +8,7 @@
     body {
         height: 100%;
     }
+    /* Ökat fontstorlek för bättre läsbarhet inom hela sidan */
     
     body {
         background-color: #F0EDDE;
@@ -40,6 +41,7 @@
         padding: 0 0.5rem;
         min-height: 100px;
     }
+    /* Navigeringsmenyn */
     
     #navbar {
         display: flex;
@@ -79,6 +81,7 @@
         justify-content: center;
         box-sizing: border-box;
     }
+    /* Effekt när man hovrar över länkarna i navigeringsmenyn */
     
     #navbar a:hover {
         background-color: #ffffff;
@@ -105,6 +108,7 @@
         width: auto;
         height: auto;
     }
+    /* En skugga under navigeringslänkarna för att visa vilken sida man befinner sig på */
     
     .nav-link[aria-current="page"] {
         box-shadow: inset 0 -4px 0 #000000;
@@ -143,6 +147,7 @@
         margin-top: 1rem;
         font-size: 1.125rem;
     }
+    /* Brödsmulor för navigering */
     
     .breadcrumbs {
         display: flex;
@@ -206,11 +211,11 @@
     
     .info-content h1 {
         margin-bottom: 0.5rem;
+        font-weight: 400;
     }
-    /* Blev för skrikigt med för mycket fetstil på startsidan*/
     
     .info-content h2 {
-        font-weight: 400;
+        font-weight: 600;
     }
     
     .info-container {
@@ -273,6 +278,7 @@
         margin: 0 auto;
         display: block;
     }
+    /* Länkar inom sidan */
     
     .link:visited {
         color: #551A8B;
@@ -305,6 +311,7 @@
         margin: 0 auto;
         gap: 5rem;
     }
+    /* Texter inom startsidan, vad är färdtjänst och vem kan få det */
     
     .what-is,
     .who-can {
@@ -332,6 +339,7 @@
         margin-bottom: 0.5rem;
         margin-top: 0.5rem;
     }
+    /* Om oss-sidan */
     
     .about-content {
         text-align: left;
@@ -387,6 +395,7 @@
     
     .FAQ-list h3 {
         line-height: 1.2;
+        font-weight: 500;
     }
     
     .payment-list ul {
@@ -394,6 +403,7 @@
         margin-bottom: 1rem;
         margin-left: 1.5rem;
     }
+    /* Bokning av resa och ändra sin resa, container */
     
     .travel-container,
     .coming-container,
@@ -489,6 +499,7 @@
         width: auto;
         flex-wrap: nowrap;
     }
+    /* Inloggningsformulär */
     
     .login-form {
         text-align: left;
@@ -541,6 +552,7 @@
         width: 100%;
         text-align: center;
     }
+    /* Visar inte knapparna för att stänga eller öppna sidomenyn på större skärmar */
     
     #open-sidebarbutton,
     #close-sidebarbutton {
@@ -554,6 +566,7 @@
         inset: 0;
         display: none;
     }
+    /* vissa knappar inom webbplatsen */
     
     .btn-primary,
     .btn-primary-green,
@@ -584,6 +597,7 @@
         justify-content: center;
         min-width: 250px;
     }
+    /* Andra knappar inom webbplatsen */
     
     .btn-secondary-green,
     .btn-secondary-blue,
@@ -679,6 +693,7 @@
         background-color: #5E6B78;
         padding-left: 1rem;
     }
+    /* Fokus och hover-effekt för knappar inom webbplatsen */
     
     .btn-primary-blue-index:hover,
     .btn-primary-blue-index:focus,
@@ -718,6 +733,7 @@
     .btn-icon {
         fill: white;
     }
+    /* Fokus och hover-effekt för ikoner */
     
     .btn-primary:hover .btn-icon,
     .btn-primary:focus .btn-icon,
@@ -754,6 +770,7 @@
     .edit-link {
         text-decoration: none;
     }
+    /* Integritetspolicy */
     
     .integrity-policy {
         display: flex;
@@ -791,6 +808,7 @@
         margin: 0 auto;
         width: 60%;
     }
+    /* Tillgänglighetsredogörelse */
     
     .usability-form {
         width: 80%;
@@ -842,6 +860,7 @@
         margin: 0 auto;
         font-weight: 600;
     }
+    /* Ingress inom tillgänglighetsredogörelsen */
     
     .ingress {
         font-size: 1.4rem;
@@ -892,6 +911,7 @@
     #message::placeholder {
         padding: 0.2rem;
     }
+    /* Meddelande inom tillgänglighetssidan */
     
     #message {
         padding: 10px;
@@ -911,6 +931,7 @@
         font-size: 1.125rem;
         padding: 0.5rem;
     }
+    /* återställa meddelande inom tillgänglighetssidan */
     
     #reset-btn {
         margin: 0 auto;
@@ -999,6 +1020,7 @@
         margin-top: 1rem;
         width: 100%;
     }
+    /* Radioknappar inom bokningsformuläret */
     
     .recurring-container input[type="radio"] {
         transform: scale(2);
@@ -1031,6 +1053,7 @@
         margin-bottom: 1rem;
         width: 80%;
     }
+    /* Textfält inom bokningsformuläret */
     
     .inputs-address input[type="text"] {
         font-size: 1.125rem;
@@ -1062,6 +1085,7 @@
         margin-bottom: 1rem;
         margin-top: 2rem;
     }
+    /* Datumfält inom bokningsformuläret */
     
     .inputs-dates input[type="date"] {
         padding: 1rem;
@@ -1150,6 +1174,7 @@
     .return-row.show {
         width: 90%;
     }
+    /* Retur inom bokningsformuläret */
     
     .return-section.show {
         display: flex;
@@ -1254,6 +1279,7 @@
         border: 1px solid #ccc;
         box-sizing: border-box;
     }
+    /* Tillbaka knapp i bokningsflödet */
     
     .back-button,
     .exit-button {
@@ -1304,6 +1330,7 @@
     .weekdays input[type="checkbox"] {
         margin-bottom: 2.5rem;
     }
+    /* Bild inom om oss */
     
     .picture-about img {
         display: flex;
@@ -1312,6 +1339,7 @@
         margin-bottom: 0.5rem;
         border-radius: 8px;
     }
+    /* Sidfot */
     
     .footer-area {
         display: flex;
@@ -1365,6 +1393,7 @@
     #navbar a .label {
         color: #000000;
     }
+    /* Surfplattor */
     
     @media (max-width: 940px) {
         header {
@@ -1377,6 +1406,7 @@
             max-height: 80px;
             width: auto;
         }
+        /* Visar ikoner i sidomenyn */
         #open-sidebarbutton {
             position: sticky;
             display: flex;
@@ -1405,6 +1435,7 @@
             font-size: 1.125rem;
             color: #ffffff;
         }
+        /* Sidomenyn */
         #navbar {
             position: fixed;
             align-items: unset;
@@ -1418,6 +1449,7 @@
             transition: right 0.4s ease-in;
             background-color: #6D2323;
         }
+        /* Lägger på klassen show genom javascript för att visa sidomenyn */
         #navbar.show {
             right: 0;
             top: 0;
@@ -1460,6 +1492,7 @@
         #navbar a .label {
             color: #ffffff;
         }
+        /* Annan färg vid hover och fokus för sidomenyn i mobilvy*/
         #navbar a:hover .nav-icon,
         #navbar a:hover .label,
         #navbar a:focus .nav-icon,
@@ -1653,6 +1686,7 @@
                 width: 80%;
             }
         }
+        /* Mobiltelefoner */
         @media screen and (max-width: 400px) {
             .button-area button {
                 max-width: 135px;
